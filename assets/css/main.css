@@ -821,7 +821,7 @@ h6 {
 section,
 .section {
   color: var(--default-color);
-  padding: 80px 0;
+  padding: 40px 0;
   scroll-margin-top: 90px;
   overflow: clip;
 }
@@ -888,18 +888,17 @@ section,
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
-  margin-top: 100px;
-  padding: 315px 0 0px 80px;
-  background: url("../img/credai/banner/web-banner.png");
+   margin-top: 50px;
+  /*padding: 315px 0 0px 80px; */
+  /* background: url("../img/credai/banner/web-banner.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  /* height: 80vh; */
+  background-size: cover; */
   position: relative;
   overflow: hidden;
   border-radius: 20px;
 }
 
-.hero::before {
+/* .hero::before {
   content: "";
   position: absolute;
   top: 0;
@@ -908,10 +907,13 @@ section,
   bottom: 0;
   background: radial-gradient(circle at 20% 80%, color-mix(in srgb, var(--accent-color), transparent 90%) 0%, transparent 50%);
   pointer-events: none;
-}
+} */
 
 .hero .hero-content {
-  padding: 15px 0 15px 0;
+  position: absolute;
+  top: 55%;
+  left: 5%;
+  /* padding: 15px 0 15px 0; */
 }
 
 .hero .hero-box {
@@ -4245,7 +4247,7 @@ section,
 
 .formDiv {
   position: absolute;
-  bottom: 0%;
+  bottom: 12%;
   right: 5%;
   /*  background: linear-gradient(to top, #dbbf74 0%, #ffe7ac 100%);*/
   padding: 28px;
