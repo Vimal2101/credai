@@ -53,7 +53,7 @@
         <!-- <i class="mobile-nav-toggle d-xl-none bi bi-list"></i> -->
       </nav>
 
-      <a class="btn-getstarted" href="#freeentry">Get Your Free VIP Pass</a>
+      <a class="btn-getstarted" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Get Your Free VIP Pass</a>
 
     </div>
   </header>
@@ -67,6 +67,8 @@
       <section id="hero" class="hero section">
         <div class="hero-img">
           <img src="assets/img/credai/banner/web-banner.png" class="img-fluid d-lg-block d-sm-block d-sm-none d-none"
+            width="100%" alt="banner">
+          <img src="assets/img/credai/banner/web-banner.png" class="img-fluid d-lg-none d-sm-block d-sm-block d-block"
             width="100%" alt="banner">
         </div>
         <div class="hero-content">
@@ -139,31 +141,31 @@
             </div>
 
             <div class="form-group">
-              <select type="text" id="type" name="type" class="form-control form-text email-icon"
-                placeholder="Construction Type">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>3</option>
+              <select name="budget" id="budjet" class="form-control form-text email-icon" required="">
+                <option value="">Budget*</option>
+                <option value="20-40L">20-40L</option>
+                <option value="40-60L">40-60L</option>
+                <option value="60-80L">60-80L</option>
+                <option value="80-1Cr">80-1Cr</option>
+                <option value="Above 1Cr">Above 1Cr</option>
               </select>
             </div>
             <div class="form-group">
-              <select type="text" id="type" name="type" class="form-control form-text email-icon"
-                placeholder="Construction Type">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>3</option>
+              <select name="property" id="date" class="form-control form-text email-icon" required="">
+                <option value="">Type Of Property*</option>
+                <option value="Apartments">Apartments</option>
+                <option value="Villas">Villas</option>
+                <option value="Plots">Plots</option>
+                <option value="Commercial Spaces">Commercial Spaces</option>
               </select>
             </div>
 
             <div class="form-group">
-              <select type="text" id="type" name="type" class="form-control form-text email-icon"
-                placeholder="Construction Type">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>3</option>
+              <select name="visit" id="date" class="form-control form-text email-icon" required="">
+                <option value="">Date of Visit*</option>
+                <option value="February 14">February 20</option>
+                <option value="February 15">February 21</option>
+                <option value="February 16">February 22</option>
               </select>
             </div>
 
@@ -179,11 +181,25 @@
 
       </section><!-- /Hero Section -->
     </div>
-
+    <!-- Floating Social Icons -->
+    <div class="floating-social">
+      <a href="https://www.facebook.com/" target="_blank" class="social facebook">
+        <i class="bi bi-facebook"></i>
+      </a>
+      <a href="https://www.instagram.com/" target="_blank" class="social instagram">
+        <i class="bi bi-instagram"></i>
+      </a>
+      <a href="https://twitter.com/" target="_blank" class="social twitter">
+        <i class="bi bi-twitter-x"></i>
+      </a>
+      <a href="https://www.youtube.com/" target="_blank" class="social youtube">
+        <i class="bi bi-youtube"></i>
+      </a>
+    </div>
     <!-- About Section -->
     <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
       <section id="about" class="about section">
-        <div class="row gy-5">
+        <div class="row">
 
           <div class="col-lg-4" data-aos="fade-right" data-aos-delay="200">
             <div class="content-wrapper">
@@ -227,7 +243,7 @@
                         <div class="feature-icon">
                           <img src="assets/img/credai/about-icon/Component 1.png">
                         </div>
-                        <p>80+<br><span> Developers </span></p>
+                        <p>35,000+ <br><span> Dwelling Units</span></p>
                       </div>
                     </div>
 
@@ -237,7 +253,7 @@
                         <div class="feature-icon">
                           <img src="assets/img/credai/about-icon/Component 1.png">
                         </div>
-                        <p>80+<br><span> Developers </span></p>
+                        <p><span>Credibility</span></p>
                       </div>
                     </div>
 
@@ -247,7 +263,7 @@
                         <div class="feature-icon">
                           <img src="assets/img/credai/about-icon/Component 1.png">
                         </div>
-                        <p>80+<br><span> Developers </span></p>
+                        <p><span>Market Upswing</span></p>
                       </div>
                     </div>
 
@@ -257,7 +273,17 @@
                         <div class="feature-icon">
                           <img src="assets/img/credai/about-icon/Component 1.png">
                         </div>
-                        <p>80+<br><span> Developers </span></p>
+                        <p><span> All RERA approved Projects </span></p>
+                      </div>
+                    </div>
+
+                    <!-- slide 5 -->
+                    <div class="swiper-slide">
+                      <div class="feature-box">
+                        <!-- <div class="feature-icon">
+                          <img src="assets/img/credai/about-icon/Component 1.png">
+                        </div> -->
+                        <p><span> Largest Showcase of Apartments, Villas, Plots and Commercial Spaces. </span></p>
                       </div>
                     </div>
 
@@ -267,59 +293,10 @@
                         <div class="feature-icon">
                           <img src="assets/img/credai/about-icon/Component 1.png">
                         </div>
-                        <p>80+<br><span> Developers </span></p>
+                        <p>45,000+ <br><span> Walk-Ins </span></p>
                       </div>
                     </div>
 
-                    <!-- slide 5 -->
-                    <div class="swiper-slide">
-                      <div class="feature-box">
-                        <div class="feature-icon">
-                          <img src="assets/img/credai/about-icon/Component 1.png">
-                        </div>
-                        <p>80+<br><span> Developers </span></p>
-                      </div>
-                    </div>
-
-                    <!-- slide 5 -->
-                    <div class="swiper-slide">
-                      <div class="feature-box">
-                        <div class="feature-icon">
-                          <img src="assets/img/credai/about-icon/Component 1.png">
-                        </div>
-                        <p>80+<br><span> Developers </span></p>
-                      </div>
-                    </div>
-
-                    <!-- slide 5 -->
-                    <div class="swiper-slide">
-                      <div class="feature-box">
-                        <div class="feature-icon">
-                          <img src="assets/img/credai/about-icon/Component 1.png">
-                        </div>
-                        <p>80+<br><span> Developers </span></p>
-                      </div>
-                    </div>
-
-                    <!-- slide 5 -->
-                    <div class="swiper-slide">
-                      <div class="feature-box">
-                        <div class="feature-icon">
-                          <img src="assets/img/credai/about-icon/Component 1.png">
-                        </div>
-                        <p>80+<br><span> Developers </span></p>
-                      </div>
-                    </div>
-
-                    <!-- slide 5 -->
-                    <div class="swiper-slide">
-                      <div class="feature-box">
-                        <div class="feature-icon">
-                          <img src="assets/img/credai/about-icon/Component 1.png">
-                        </div>
-                        <p>80+<br><span> Developers </span></p>
-                      </div>
-                    </div>
 
                   </div>
                 </div>
@@ -669,49 +646,49 @@
     </div>
 
     <!-- Services Section -->
+    <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+      <section id="services" class="services section">
+
         <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
-            <section id="services" class="services section">
 
-                <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
-
-                    <div class="row g-5 align-items-center">
-                        <div class="col-lg-7">
-                            <div class="hero-visual" data-aos="fade-left" data-aos-delay="150">
-                                <img src="assets/img/credai/sponsor-left.png" alt="Services" class="img-fluid">
-                            </div>
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="intro-content" data-aos="fade-right" data-aos-delay="100">
-                                <!-- <div class="section-badge mb-3" data-aos="zoom-in" data-aos-delay="50">
+          <div class="row align-items-center">
+            <div class="col-lg-7 order-lg-1 order-2">
+              <div class="hero-visual" data-aos="fade-left" data-aos-delay="150">
+                <img src="assets/img/credai/sponsor-left.png" alt="Services" class="img-fluid">
+              </div>
+            </div>
+            <div class="col-lg-5 order-lg-2 order-1">
+              <div class="intro-content" data-aos="fade-right" data-aos-delay="100">
+                <!-- <div class="section-badge mb-3" data-aos="zoom-in" data-aos-delay="50">
                                 <i class="bi bi-star-fill"></i>
                                 <span>WHAT WE DO</span>
                             </div> -->
-                                <h2 class="section-heading mb-4">Find Your Ideal Property</h2>
-                                <p class="section-description mb-4">The welcome screen greets you with clear
-                                    instructions.
-                                    Everything you need is right in front of you.</p>
-                                <!-- <a href="#" class="cta-button" data-aos="fade-right" data-aos-delay="200">
+                <h2 class="section-heading mb-4">Find Your Ideal Property</h2>
+                <p class="section-description mb-4">The welcome screen greets you with clear
+                  instructions.
+                  Everything you need is right in front of you.</p>
+                <!-- <a href="#" class="cta-button" data-aos="fade-right" data-aos-delay="200">
                                 Explore Our Work
                             </a> -->
-                            </div>
-                        </div>
+              </div>
+            </div>
 
-                    </div>
+          </div>
 
 
 
-                </div>
-
-            </section>
         </div>
-       
+
+      </section>
+    </div>
+
     <!-- QR Section -->
     <section class="free-entry-section" id="freeentry">
       <div class="container">
         <div class="row align-items-center">
 
           <!-- LEFT : QR / MOBILE IMAGE -->
-          <div class="col-lg-4 col-md-6 text-center">
+          <div class="col-lg-4 col-md-6">
             <!-- <div class="qr-wrapper ">
                         <img src="assets/img/QR-scan.png" alt="Scan QR Code" class="img-fluid free-entry-phone">
 
@@ -721,6 +698,9 @@
 
           <!-- RIGHT : CONTENT -->
           <div class="col-lg-8 col-md-6">
+            <div class="qr-code d-block d-lg-none mb-4">
+              <img src="assets/img/credai/new-qr-code.webp" width="50%" alt="QR Code" class="img-fluid">
+            </div>
             <div class="free-entry-content">
               <h2>Get free entry tickets</h2>
               <p>
@@ -796,6 +776,83 @@
       </div>
     </div>
   </footer>
+
+     <div class="bottom_button d-lg-none d-md-none d-sm-block d-block">
+            <div class="formButton"><a href="#" data-bs-toggle="modal" data-bs-target="#registerModal"  class="blink"><i class="fa fa-phone"></i> Get Your Free VIP Pass</a></div>
+            <!-- <div class="contactButtom"><a href="#mainform" onclick="myFunction()" class="blink_mes"><i
+                        class="fa fa-list"></i>
+                    Enquire Now</a></div> -->
+        </div>
+
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-4">
+
+      <!-- Modal Header -->
+      <div class="modal-header border-0">
+        <h5 class="modal-title" id="registerModalLabel">Register Your Interest</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body">
+
+          <form name="form1" action="" id="submitForm" method="post" class="full-form-container main-form"
+            onsubmit="return validate();">
+
+            <div class="form-group">
+              <input type="text" id="name" name="name" class="form-control form-text user-icon" placeholder="Name"
+                onkeydown="return /[a-z]/i.test(event.key)">
+            </div>
+
+            <div class="form-group">
+              <input type="email" id="email" name="email" class="form-control form-text email-icon" placeholder="Email">
+            </div>
+
+            <div class="form-group">
+              <input type="tel" id="phone" name="phone" class="form-control form-text email-icon" placeholder="Mobile"
+                maxlength="10">
+            </div>
+
+            <div class="form-group">
+              <select name="budget" id="budjet" class="form-control form-text email-icon" required="">
+                <option value="">Budget*</option>
+                <option value="20-40L">20-40L</option>
+                <option value="40-60L">40-60L</option>
+                <option value="60-80L">60-80L</option>
+                <option value="80-1Cr">80-1Cr</option>
+                <option value="Above 1Cr">Above 1Cr</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <select name="property" id="date" class="form-control form-text email-icon" required="">
+                <option value="">Type Of Property*</option>
+                <option value="Apartments">Apartments</option>
+                <option value="Villas">Villas</option>
+                <option value="Plots">Plots</option>
+                <option value="Commercial Spaces">Commercial Spaces</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <select name="visit" id="date" class="form-control form-text email-icon" required="">
+                <option value="">Date of Visit*</option>
+                <option value="February 14">February 20</option>
+                <option value="February 15">February 21</option>
+                <option value="February 16">February 22</option>
+              </select>
+            </div>
+
+
+            <div class="form-btn text-center mt-2">
+              <input class="" type="submit" value="Register" id="submitbtn">
+            </div>
+
+          </form>
+      </div>
+    </div>
+  </div>
+</div>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
@@ -954,6 +1011,16 @@
       autoScroll();
     });
   </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
+      const modal = new bootstrap.Modal(
+        document.getElementById("registerModal")
+      );
+      modal.show();
+    }, 10000); // 10 seconds
+  });
+</script>
 </body>
 
 </html>
