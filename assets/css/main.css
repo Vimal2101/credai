@@ -1446,25 +1446,35 @@ section,
   padding: 40px 0;
 }
 
+/* marquee stays horizontal */
 .logo-marquee {
   display: flex;
   width: max-content;
 }
 
+/* slide becomes a vertical grid of rows */
 .logo-slide {
-  display: block;
+  display: grid;
+  grid-auto-rows: auto;
+  row-gap: 80px;
 }
 
+/* each row becomes a grid */
 .logo-row {
-  display: flex;
-  gap: 80px;
-  padding: 25px 60px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 140px; /* equal logo columns */
+  align-items: center;
+  column-gap: 60px;
+  padding: 0 60px;
 }
 
+/* logo consistency */
 .logo-row img {
   height: 50px;
-  max-width: 100px;
+  width: 100%;
   object-fit: contain;
+  justify-self: center;
 }
 
 /* Scrollbar width */
