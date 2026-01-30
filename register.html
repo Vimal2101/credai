@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>CREDAI Fairpro 2026 | Chennai’s Premier Property Expo</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.ico" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- intl-tel-input CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" />
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <style>
+   .main-form .form-btn input {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: #A10F2F;
+    border: none;
+    padding: 10px 15px;
+    width: 100%;
+    color: #fff;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 5px;
+}
+
+  .error {
+  color: red;
+  font-size: 12px;
+  display: block;
+  margin-top: 4px;
+}
+
+input.error-border {
+  border: 1px solid red !important;
+}
+        @media only screen and (max-width: 600px) {
+            .cus-img {
+                max-width: 100%;
+                height: auto;
+                width: auto\9;
+                /* ie8 */
+            }
+        }
+
+        @media only screen and (min-width: 601px) {
+            .cus-img {
+                padding-left: 12px;
+                max-width: 100%;
+                height: auto;
+                width: auto\9;
+                /* ie8 */
+            }
+        }
+    </style>
+
+</head>
+
+<scr>
+    <div class="main-wrapper">
+        <div class="page-wrapper full-page"
+            style="background-image: url(assets/images/bg.jpg);background-size: cover;background-position: top left;">
+            <div class="page-content d-flex align-items-center justify-content-center">
+                <div class="row w-100 mx-0 auth-page">
+                    <div class="col-md-10 col-xl-8 mx-auto">
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-md-12 pl-md-0">
+                                    <img class="noble-ui-logo mx-auto d-block mb-2 cus-img"
+                                        src="assets/images/credai-banner.jpg">
+                                    <div class="auth-form-wrapper px-4 py-2">
+                                        <div class="text-center">
+                                            <span class="text-muted font-weight-normal mb-6">Register your details for
+                                                Free VIP Pass.</span>
+                                        </div>
+                                        <hr>
+                                        <form name="form" action="" id="submitForm" method="post"
+                                            class="full-form-container main-form" onsubmit="return validate();">
+                                            <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="text" id="name" name="name"
+                                                        class="form-control form-text user-icon" placeholder="Name"
+                                                        onkeydown="return /[a-z]/i.test(event.key)">
+                                                    <small class="error" id="nameError"></small>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="tel" id="phone" name="phone"
+                                                        class="form-control form-text email-icon" placeholder="Mobile">
+                                                    <small class="error" id="phoneError"></small>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="email" id="email" name="email"
+                                                        class="form-control form-text email-icon" placeholder="Email">
+                                                    <small class="error" id="emailError"></small>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <select name="property" id="date"
+                                                        class="form-control form-text email-icon">
+                                                        <option value="">Type Of Property</option>
+                                                        <option value="Apartments">Apartments</option>
+                                                        <option value="Villas">Villas</option>
+                                                        <option value="Plots">Plots</option>
+                                                        <option value="Commercial Spaces">Commercial Spaces</option>
+                                                    </select>
+                                                </div>
+                                                </div> -->
+                                                <input type="hidden" name="url" class="pageUrl">
+</div>
+                                                <div class="form-btn text-center">
+                                                    <input class="btn-register" type="submit" value="Register" id="submitbtn">
+                                                </div>
+
+                                        </form>
+             
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- core:js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <!-- intl-tel-input JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js"></script>
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <!-- endinject -->
+  <script>
+    const phoneInputs = [
+      document.querySelector("#phone"),
+    ];
+
+    const itiInstances = [];
+
+    // Initialize intl-tel-input for each phone field
+    phoneInputs.forEach(input => {
+      if (!input) return;
+
+      const iti = window.intlTelInput(input, {
+        initialCountry: "in",
+        separateDialCode: true,
+        nationalMode: false,
+        preferredCountries: ["in", "us", "gb", "ae"],
+        autoPlaceholder: "polite",
+      });
+
+      itiInstances.push({ input, iti });
+    });
+
+    // Handle multiple form submits
+    ["submitForm", "submitForm-popup"].forEach(formId => {
+      const form = document.getElementById(formId);
+      if (!form) return;
+
+      form.addEventListener("submit", function () {
+        itiInstances.forEach(({ input, iti }) => {
+          input.value = iti.getNumber(); // +91XXXXXXXXXX
+        });
+      });
+    });
+  </script>
+  <script>
+    $(":input").focus(function () {
+      $(this).css("border", "1px solid #7c7c7c")
+        .removeClass("error-border");
+      $(this).next(".error").text("");
+    });
+
+    function showError(inputId, message) {
+      $("#" + inputId).addClass("error-border");
+      $("#" + inputId + "Error").text(message);
+    }
+
+    function validate() {
+
+      let name = $('#name').val().trim();
+      let phone = $('#phone').val().trim();
+      let email = $('#email').val().trim();
+
+      let phoneFilter = /^[1-9][0-9]{9}$/;
+      let emailFilter = /^([a-zA-Z0-9_\.\-])+@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+      if (name === '') {
+        showError('name', 'Name field is mandatory');
+        return false;
+      }
+
+      if (phone === '') {
+        showError('phone', 'Phone field is mandatory');
+        return false;
+      }
+
+      if (!phoneFilter.test(phone)) {
+        showError('phone', 'Please enter a valid mobile number');
+        return false;
+      }
+
+      if (email === '') {
+        showError('email', 'Email field is mandatory');
+        return false;
+      }
+
+      if (!emailFilter.test(email)) {
+        showError('email', 'Please enter a valid email ID');
+        return false;
+      }
+      document.activeElement
+        .closest("form")
+        .dataset.validated = "true";
+      return true;
+    }
+</script>
+     <script>
+    document.querySelectorAll(".pageUrl").forEach(input => {
+      input.value = window.location.href;
+    });
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbxRXUwhwZNhcz7FSdyaqvcdIcR_20FYfkpLB4UFWjwCAzHWyId_24rvHVjjd3XsQgam/exec";
+    document.querySelectorAll(".main-form").forEach((form) => {
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        // Get form field valuesf
+        const name = form.name.value.trim();
+        const phone = form.phone.value.trim();
+        const email = form.email.value.trim();
+
+        // ✅ ONLY check if validation already succeeded
+        if (form.dataset.validated !== "true") {
+          return; // validation not completed → stop
+        }
+        const formData = new FormData(form);
+
+        // 1️⃣ Send to Google Script
+        fetch(scriptURL, { method: "POST", body: formData })
+          .then((res) => console.log("✅ Sent to Google Script"))
+          .catch((err) => console.error("❌ Google Script Error:", err));
+
+        // 2️⃣ Send to PHP backend
+        fetch(form.action, { method: "POST", body: formData })
+          .then((res) => {
+            console.log("✅ Sent to PHP");
+            window.location.href = "thankyou.html"; // redirect after both succeed
+          })
+          .catch((err) => {
+            console.error("❌ PHP Error:", err);
+            alert("Something went wrong. Please try again!");
+          });
+      });
+    });
+  </script>
+</body>
+
+</html>

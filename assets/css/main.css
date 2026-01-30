@@ -55,6 +55,16 @@
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
+
+.iti {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.iti__flag-container {
+  pointer-events: none;
+}
+
 body {
   color: var(--default-color);
   background-image: url("../img/credai/bg/body-bg.png");
@@ -144,6 +154,79 @@ h6 {
   background: #A10F2F;
 }
 
+.auto-shine-btn {
+  position: relative;
+  padding: 14px 36px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  overflow: hidden;
+
+  /* Glow */
+  box-shadow:
+    0 0 10px rgba(255, 152, 0, 0.6),
+    0 0 25px rgba(255, 87, 34, 0.8);
+
+  /* Glow animation */
+  animation: glowPulse 3s infinite;
+}
+
+/* Moving shine */
+.auto-shine-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -80%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg,
+      transparent,
+      rgba(255, 255, 255, 0.7),
+      transparent);
+  transform: skewX(-25deg);
+  animation: shineMove 2s infinite;
+}
+
+/* Shine animation */
+@keyframes shineMove {
+  0% {
+    left: -80%;
+  }
+
+  40% {
+    left: 120%;
+  }
+
+  100% {
+    left: 120%;
+  }
+}
+
+/* Glow pulse animation */
+@keyframes glowPulse {
+  0% {
+    box-shadow:
+      0 0 10px rgba(255, 152, 0, 0.5),
+      0 0 25px rgba(255, 87, 34, 0.7);
+  }
+
+  50% {
+    box-shadow:
+      0 0 20px rgba(255, 152, 0, 0.9),
+      0 0 45px rgba(255, 87, 34, 1);
+  }
+
+  100% {
+    box-shadow:
+      0 0 10px rgba(255, 152, 0, 0.5),
+      0 0 25px rgba(255, 87, 34, 0.7);
+  }
+}
+
 @media (max-width: 1200px) {
   .header .logo {
     order: 1;
@@ -191,6 +274,7 @@ h6 {
     display: flex;
     list-style: none;
     align-items: center;
+    gap: 25px;
   }
 
   .navmenu li {
@@ -211,6 +295,9 @@ h6 {
     justify-content: space-between;
     white-space: nowrap;
     transition: 0.3s;
+    border: 1px solid #a10f2f;
+    border-radius: 5px;
+
   }
 
   .navmenu a i,
@@ -221,8 +308,10 @@ h6 {
     transition: 0.3s;
   }
 
-  .navmenu li:last-child a {
-    padding-right: 0;
+  .navmenu i {
+    color: #a10f2f !important;
+    font-size: 14px;
+    padding-right: 5px;
   }
 
   .navmenu li:hover>a,
@@ -498,7 +587,7 @@ h6 {
 .custom-footer {
   background: #000;
   color: #fff;
-  padding: 40px 0 20px;
+  padding: 20px 0 20px;
   font-size: 14px;
 }
 
@@ -913,7 +1002,7 @@ section,
 .hero .hero-content .hero-actions .reg h4 small {
   color: #FB0;
   font-family: Inter;
-  font-size: 15px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -1413,14 +1502,22 @@ section,
 # Features Section
 --------------------------------------------------------------*/
 .features .tabs-wrapper {
-  background-color: #fff;
+  border-top: 1px solid #005B31;
+  border-bottom: 1px solid #A10F2F;
+  /* background-color: #005B31; */
+      background: url(../img/credai/Journey-bg.png);
+      background-position: bottom center;
   border-radius: 20px;
-  padding: 40px 10px;
+  padding: 40px 10px 80px;
   box-shadow: 0 4px 51.9px 0 rgba(0, 0, 0, 0.13);
 }
 
 .features .tabs-wrapper .section-header h2 {
-  color: #005B31;
+  background: linear-gradient(97deg, #FB0 1.55%, #FFF 53.6%, #FB0 108.74%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* color: #005B31; */
   text-align: center;
   font-family: "Adobe Devanagari";
   font-size: 50px;
@@ -1430,6 +1527,10 @@ section,
 }
 
 .features .tabs-wrapper .section-header h3 {
+  background: linear-gradient(97deg, #FB0 1.55%, #FFF 53.6%, #FB0 108.74%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   color: #005B31;
   text-align: center;
   font-family: "Adobe Devanagari";
@@ -1456,16 +1557,17 @@ section,
 .logo-slide {
   display: grid;
   grid-auto-rows: auto;
-  row-gap: 80px;
+  row-gap: 50px;
 }
 
 /* each row becomes a grid */
 .logo-row {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 140px; /* equal logo columns */
+  grid-auto-columns: 140px;
+  /* equal logo columns */
   align-items: center;
-  column-gap: 60px;
+  column-gap: 30px;
   padding: 0 60px;
 }
 
@@ -2014,7 +2116,7 @@ section,
 .timeline-dots span {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   cursor: pointer;
 }
 
@@ -2045,13 +2147,14 @@ section,
 /* ACTIVE STATE */
 .timeline-dots span.active::before {
   background: #c1143a;
+  border: 5px solid #fff;
 }
 
 .timeline-dots span.active small {
   color: #FFF;
 
   font-family: "Adobe Devanagari";
-  font-size: 30px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -2151,6 +2254,17 @@ section,
   font-weight: 400;
 }
 
+.call-to-action .content-area ul li {
+  color: #FFF;
+  width: 90%;
+  line-height: 30px;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  list-style: square;
+}
+
 
 .call-to-action .content-area>p {
   font-size: 1.1rem;
@@ -2243,10 +2357,12 @@ section,
 # Services Section
 --------------------------------------------------------------*/
 .services {
+  margin-top: 50px;
   padding: 50px 0;
-  background-image: url('../img/credai/sponsor-bg.png');
+  background-image: url('../img/credai/event-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: bottom center;
   border-radius: 20px;
 }
 
@@ -2396,6 +2512,90 @@ section,
   margin-bottom: 0;
 }
 
+/*Carousel Gallery*/
+.carousel-gallery {
+  margin: 50px 0;
+  padding: 0 30px;
+
+  .swiper-slide {
+    a {
+      display: block;
+      width: 100%;
+      height: 280px;
+      border-radius: 15px;
+      overflow: hidden;
+      position: relative;
+
+      -webkit-box-shadow: 3px 2px 20px 0px rgba(0, 0, 0, .2);
+      -moz-box-shadow: 3px 2px 20px 0px rgba(0, 0, 0, .2);
+      box-shadow: 3px 2px 20px 0px rgba(0, 0, 0, .2);
+
+      &:hover {
+        .image {
+          .overlay {
+            opacity: 1
+          }
+        }
+      }
+
+      .image {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center center;
+
+        .overlay {
+          width: 100%;
+          height: 100%;
+          background-color: rgba(20, 20, 20, .8);
+          text-align: center;
+          opacity: 0;
+
+          -webkit-transition: all .2s linear;
+          -o-transition: all .2s linear;
+          transition: all .2s linear;
+
+          em {
+            color: #fff;
+            font-size: 26px;
+            position: relative;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+
+  .swiper-pagination {
+    position: relative;
+    bottom: auto;
+    text-align: center;
+    margin-top: 25px;
+
+    .swiper-pagination-bullet {
+      -webkit-transition: all .2s linear;
+      -o-transition: all .2s linear;
+      transition: all .2s linear;
+
+      &:hover {
+        opacity: .7;
+      }
+
+      &.swiper-pagination-bullet-active {
+        background-color: #fff;
+        transform: scale(1.1, 1.1)
+      }
+    }
+  }
+}
+
+/*# Carousel Gallery*/
+
 @media (max-width: 768px) {
   .services {
     padding: 60px 0;
@@ -2422,8 +2622,11 @@ section,
 }
 
 .partner-main-card {
+  border-top: 1px solid #A10F2F;
+  border-bottom: 1px solid #005B31;
+  border-radius: 20px;
   background: #fff;
-  border-radius: 22px;
+  /* border-radius: 22px; */
   padding: 25px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
@@ -2461,7 +2664,7 @@ section,
 }
 
 .logo-box img {
-  max-height: 50px;
+  max-height: 60px;
   max-width: 100%;
   object-fit: contain;
 }
@@ -2481,14 +2684,13 @@ section,
 
 /* Heading outside card (right column) */
 .partner-heading.outside {
-  text-align: start;
+  text-align: center;
   font-weight: 400;
   color: #005B31;
   margin-bottom: 20px;
-  letter-spacing: 0.5px;
-  padding-left: 40px;
+  /* padding-left: 40px; */
   font-family: "Adobe Devanagari";
-  font-size: 35px;
+  font-size: 30px;
   font-style: normal;
   text-transform: uppercase;
 }
@@ -2506,9 +2708,10 @@ section,
 /* RIGHT COLUMN INTERNAL SCROLL */
 .right-partners {
   height: 100%;
-  max-height: 510px;
+  max-height: 100%;
   /* adjust as needed */
-  overflow-y: auto;
+  /* overflow-y: auto; */
+   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 20px;
   /* space for scrollbar */
@@ -2528,11 +2731,12 @@ section,
 
 .formDiv {
   position: absolute;
-  bottom: 12%;
+  /* bottom: 12%; */
+  top: 25%;
   right: 5%;
   /*  background: linear-gradient(to top, #dbbf74 0%, #ffe7ac 100%);*/
   padding: 28px;
-  border-radius: 20px 20px 0 0;
+  border-radius: 15px;
   width: 380px;
   background: #A10F2F;
 }
@@ -2578,20 +2782,30 @@ section,
   padding: 12px;
   margin-bottom: 10px;
   height: 40px;
-  color: #fff;
+  color: #000;
   font-family: Inter;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   border-radius: 5px;
-  background: rgba(255, 255, 255, 0.20);
+  background: rgba(255, 255, 255, 0.80);
+}
+
+.error {
+  color: #fff;
+  font-size: 12px;
+  display: block;
+  margin-top: 4px;
+}
+
+input.error-border {
+  border: 1px solid red !important;
 }
 
 /* Placeholder color */
-.formDiv .form-control::placeholder {
+/* .formDiv .form-control::placeholder {
   color: #ffffff;
   opacity: 1;
-  /* Firefox */
 }
 
 .formDiv .form-control::-webkit-input-placeholder {
@@ -2604,12 +2818,13 @@ section,
 
 .formDiv .form-control::-ms-input-placeholder {
   color: #ffffff;
-}
+} */
 
 @media screen and (max-width: 768px) {
-  .custom-footer{
+  .custom-footer {
     margin-bottom: 20px;
   }
+
   .free-entry-section {
     text-align: center;
     background-position: center;
@@ -2627,7 +2842,7 @@ section,
   .right-partners {
     height: 100%;
     max-height: none;
-    overflow-y: auto;
+    /* overflow-y: auto; */
     padding-right: 0px;
     padding-bottom: 0px;
   }
@@ -2696,9 +2911,10 @@ section,
   /* .hero-img img {
     height: 700px;
   } */
-.time-grid p {
+  .time-grid p {
     font-size: 14px;
-}
+  }
+
   .hero .hero-content {
     top: 26%;
   }
@@ -2855,6 +3071,10 @@ section,
 
 .social.youtube:hover {
   background: #ff0000;
+}
+
+.partners-section{
+  background-color: #ffebb1;
 }
 
 /* Hide on small screens if needed */

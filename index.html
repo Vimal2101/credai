@@ -23,14 +23,14 @@
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
+  <!-- intl-tel-input CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" />
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
 </head>
-
 
 <body class="index-page">
 
@@ -45,15 +45,17 @@
 
       <nav id="navmenu" class="navmenu ms-auto">
         <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#features">Particpants</a></li>
-          <li><a href="#partners">Partners</a></li>
+          <li><a href="#about"><i class="bi bi-house-door-fill"></i> About</a></li>
+          <li><a href="#features"><i class="bi bi-building-fill"></i>Particpants</a></li>
+          <li><a href="#partners"><i class="bi bi-hand-thumbs-up-fill"></i> Partners</a></li>
 
         </ul>
         <!-- <i class="mobile-nav-toggle d-xl-none bi bi-list"></i> -->
       </nav>
 
-      <a class="btn-getstarted" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Get Your Free VIP Pass</a>
+      <a class="btn-getstarted auto-shine-btn" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Get Your
+        Free VIP
+        Pass</a>
 
     </div>
   </header>
@@ -123,23 +125,25 @@
             <h4>Register Your Interest</h4>
           </div>
 
-          <form name="form1" action="" id="submitForm" method="post" class="full-form-container main-form"
+          <form name="form" action="" id="submitForm" method="post" class="full-form-container main-form"
             onsubmit="return validate();">
 
             <div class="form-group">
               <input type="text" id="name" name="name" class="form-control form-text user-icon" placeholder="Name"
                 onkeydown="return /[a-z]/i.test(event.key)">
+              <small class="error" id="nameError"></small>
             </div>
-
+            <div class="form-group">
+              <input type="tel" id="phone" name="phone" class="form-control form-text email-icon" placeholder="Mobile">
+              <small class="error" id="phoneError"></small>
+            </div>
             <div class="form-group">
               <input type="email" id="email" name="email" class="form-control form-text email-icon" placeholder="Email">
+              <small class="error" id="emailError"></small>
             </div>
 
-            <div class="form-group">
-              <input type="tel" id="phone" name="phone" class="form-control form-text email-icon" placeholder="Mobile"
-                maxlength="10">
-            </div>
 
+            <!-- 
             <div class="form-group">
               <select name="budget" id="budjet" class="form-control form-text email-icon" required="">
                 <option value="">Budget*</option>
@@ -149,25 +153,25 @@
                 <option value="80-1Cr">80-1Cr</option>
                 <option value="Above 1Cr">Above 1Cr</option>
               </select>
-            </div>
-            <div class="form-group">
-              <select name="property" id="date" class="form-control form-text email-icon" required="">
-                <option value="">Type Of Property*</option>
+            </div> -->
+            <!-- <div class="form-group">
+              <select name="property" id="date" class="form-control form-text email-icon">
+                <option value="">Type Of Property</option>
                 <option value="Apartments">Apartments</option>
                 <option value="Villas">Villas</option>
                 <option value="Plots">Plots</option>
                 <option value="Commercial Spaces">Commercial Spaces</option>
               </select>
-            </div>
-
-            <div class="form-group">
+            </div> -->
+            <input type="hidden" name="url" class="pageUrl">
+            <!-- <div class="form-group">
               <select name="visit" id="date" class="form-control form-text email-icon" required="">
                 <option value="">Date of Visit*</option>
                 <option value="February 14">February 20</option>
                 <option value="February 15">February 21</option>
                 <option value="February 16">February 22</option>
               </select>
-            </div>
+            </div> -->
 
 
             <div class="form-btn text-center">
@@ -182,7 +186,7 @@
       </section><!-- /Hero Section -->
     </div>
     <!-- Floating Social Icons -->
-    <div class="floating-social">
+    <!-- <div class="floating-social">
       <a href="https://www.facebook.com/" target="_blank" class="social facebook">
         <i class="bi bi-facebook"></i>
       </a>
@@ -195,17 +199,17 @@
       <a href="https://www.youtube.com/" target="_blank" class="social youtube">
         <i class="bi bi-youtube"></i>
       </a>
-    </div>
+    </div> -->
     <!-- About Section -->
-    <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+    <div class="container-fluid" data-aos="fade-up">
       <section id="about" class="about section">
         <div class="row">
 
           <div class="col-lg-4" data-aos="fade-right" data-aos-delay="200">
             <div class="content-wrapper">
               <div class="section-header">
-                <h2>About</h2>
-                <h3>CREDAI CHENNAI</h3>
+                <h2>CREDibility Shaped</h2>
+                <h3>Our Story</h3>
               </div>
 
 
@@ -216,91 +220,98 @@
             <div class="visual-section">
 
 
-              <p class="description-text">Established in 2008, this organization comprises over 190 members committed to
-                reliability and accountability. Through the CREDAI Code of Conduct, it enforces ethical real estate
-                practices, while its Consumer Redressal Forum ensures transparency by providing a timely platform for
-                resolving buyer grievances.</p>
+              <p class="description-text">Founded in 2008, CREDAI began with a simple intention: “to bring trust back
+                into real estate.” Today, with a strong network of over 190 member developers, that purpose remains
+                unchanged.
+                <br><br>
+                Every member adheres to the CREDAI Code of Conduct, upholding ethical and transparent practices, while
+                the Consumer Redressal Forum reinforces accountability by resolving homebuyer concerns. This consistent
+                focus on credibility is what shaped our journey and continues to inspire confidence every day.
+              </p>
 
 
-              <div class="features-section">
 
-                <div class="swiper featuresSwiper">
-                  <div class="swiper-wrapper">
+            </div>
 
-                    <!-- slide 1 -->
-                    <div class="swiper-slide">
-                      <div class="feature-box">
-                        <div class="feature-icon">
-                          <img src="assets/img/credai/about-icon/Component 1.png">
-                        </div>
-                        <p>80+<br><span> Developers </span></p>
+          </div>
+          <div class="col-lg-12" data-aos="fade-left" data-aos-delay="300">
+            <div class="features-section">
+
+              <div class="swiper featuresSwiper">
+                <div class="swiper-wrapper">
+
+                  <!-- slide 1 -->
+                  <div class="swiper-slide">
+                    <div class="feature-box">
+                      <div class="feature-icon">
+                        <img src="assets/img/credai/about-icon/urban.png">
                       </div>
+                      <p>80+<br><span> Developers </span></p>
                     </div>
+                  </div>
 
-                    <!-- slide 2 -->
-                    <div class="swiper-slide">
-                      <div class="feature-box">
-                        <div class="feature-icon">
-                          <img src="assets/img/credai/about-icon/Component 1.png">
-                        </div>
-                        <p>35,000+ <br><span> Dwelling Units</span></p>
+                  <!-- slide 2 -->
+                  <div class="swiper-slide">
+                    <div class="feature-box">
+                      <div class="feature-icon">
+                        <img src="assets/img/credai/about-icon/unit.png">
                       </div>
+                      <p>35,000+ <br><span> Dwelling Units</span></p>
                     </div>
+                  </div>
 
-                    <!-- slide 3 -->
-                    <div class="swiper-slide">
-                      <div class="feature-box">
-                        <div class="feature-icon">
-                          <img src="assets/img/credai/about-icon/Component 1.png">
-                        </div>
-                        <p><span>Credibility</span></p>
+                  <!-- slide 3 -->
+                  <div class="swiper-slide">
+                    <div class="feature-box">
+                      <div class="feature-icon">
+                        <img src="assets/img/credai/about-icon/shield.png">
                       </div>
+                      <p><span>Credibility</span></p>
                     </div>
+                  </div>
 
-                    <!-- slide 4 -->
-                    <div class="swiper-slide">
-                      <div class="feature-box">
-                        <div class="feature-icon">
-                          <img src="assets/img/credai/about-icon/Component 1.png">
-                        </div>
-                        <p><span>Market Upswing</span></p>
+                  <!-- slide 4 -->
+                  <div class="swiper-slide">
+                    <div class="feature-box">
+                      <div class="feature-icon">
+                        <img src="assets/img/credai/about-icon/up.png">
                       </div>
+                      <p><span>Market Upswing</span></p>
                     </div>
+                  </div>
 
-                    <!-- slide 5 -->
-                    <div class="swiper-slide">
-                      <div class="feature-box">
-                        <div class="feature-icon">
-                          <img src="assets/img/credai/about-icon/Component 1.png">
-                        </div>
-                        <p><span> All RERA approved Projects </span></p>
+                  <!-- slide 5 -->
+                  <div class="swiper-slide">
+                    <div class="feature-box">
+                      <div class="feature-icon">
+                        <img src="assets/img/credai/about-icon/quality.png">
                       </div>
+                      <p><span> All RERA approved Projects </span></p>
                     </div>
+                  </div>
 
-                    <!-- slide 5 -->
-                    <div class="swiper-slide">
-                      <div class="feature-box">
-                        <!-- <div class="feature-icon">
+                  <!-- slide 5 -->
+                  <div class="swiper-slide">
+                    <div class="feature-box">
+                      <!-- <div class="feature-icon">
                           <img src="assets/img/credai/about-icon/Component 1.png">
                         </div> -->
-                        <p><span> Largest Showcase of Apartments, Villas, Plots and Commercial Spaces. </span></p>
-                      </div>
+                      <p><span> Largest Showcase of Apartments, Villas, Plots and Commercial Spaces. </span></p>
                     </div>
-
-                    <!-- slide 5 -->
-                    <div class="swiper-slide">
-                      <div class="feature-box">
-                        <div class="feature-icon">
-                          <img src="assets/img/credai/about-icon/Component 1.png">
-                        </div>
-                        <p>45,000+ <br><span> Walk-Ins </span></p>
-                      </div>
-                    </div>
-
-
                   </div>
-                </div>
 
+                  <!-- slide 5 -->
+                  <div class="swiper-slide">
+                    <div class="feature-box">
+                      <div class="feature-icon">
+                        <img src="assets/img/credai/about-icon/group.png">
+                      </div>
+                      <p>45,000+ <br><span> Walk-Ins </span></p>
+                    </div>
+                  </div>
+
+
+                </div>
               </div>
 
             </div>
@@ -311,20 +322,20 @@
     </div>
 
     <!-- Journey Section -->
-    <div class="container-fluid aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+    <div class="container-fluid aos-init aos-animate" data-aos="fade-up">
       <section id="call-to-action" class="call-to-action section">
         <div class="row align-items-lg-center">
-          <div class="col-lg-4 aos-init aos-animate" data-aos="fade-left" data-aos-delay="200">
+          <div class="col-lg-4 aos-init aos-animate d-none d-lg-block d-sm-none" data-aos="fade-left">
             <div class="image-wrapper position-relative">
 
-              <img src="assets/img/credai/journey-video.png" alt="Security Solutions" class="img-fluid">
+              <img src="assets/img/credai/edit.png" alt="Security Solutions" class="img-fluid">
             </div>
           </div>
 
-          <div class="col-lg-8 aos-init aos-animate" data-aos="fade-right" data-aos-delay="100">
+          <div class="col-lg-8 aos-init aos-animate" data-aos="fade-right">
             <div class="content-area">
-              <h2>Growth Story</h2>
-              <h3>Of Credai chennai</h3>
+              <h2>FAIR Advice</h2>
+              <h3>Journey</h3>
               <!-- Timeline -->
               <div class="timeline">
                 <div class="timeline-line"></div>
@@ -343,42 +354,69 @@
 
                   <div class="swiper-slide">
                     <h4>A Record-Defining Edition</h4>
-                    <p>The 17th CREDAI Chennai FAIRPRO rewrote records with <b>48506</b> visitors, <b>415</b> bookings, and <b>₹415</b>
-                      crore in sales, setting a new high for the expo. Backed by <b>77</b> top developers, <b>500+</b> projects, and
+                    <ul>
+                      <li>Developers - 77 </li>
+                      <li> Footfalls - 48506 </li>
+                      <li> Bookings - 415 </li>
+                      <li> Revenue - 415 Cr </li>
+                      </li>
+                    </ul>
+                    <!-- <p>The 17th CREDAI Chennai FAIRPRO rewrote records with <b>48506</b> visitors, <b>415</b> bookings,
+                      and <b>₹415</b>
+                      crore in sales, setting a new high for the expo. Backed by <b>77</b> top developers, <b>500+</b>
+                      projects, and
                       leading banks led by SBI, it reaffirmed FAIRPRO’s standing as South India’s most trusted real
-                      estate platform.</p>
+                      estate platform.</p> -->
                   </div>
 
                   <div class="swiper-slide">
-                    <h4>A Record-Defining Edition</h4>
-                    <p>The 16th CREDAI Chennai FAIRPRO rewrote records with <b>31000</b> visitors, <b>310</b> bookings, and <b>₹260</b>
-                      crore in sales, setting a new high for the expo. Backed by <b>76</b> top developers, <b>500+</b> projects, and
+                    <h4> A Market-Shaping Edition</h4>
+                    <ul>
+                      <li>Developers - 76 </li>
+                      <li> Footfalls - 31000 </li>
+                      <li> Bookings - 310 </li>
+                      <li> Revenue - 260 Cr </li>
+                      </li>
+                    </ul>
+                    <!-- <p>The 16th CREDAI Chennai FAIRPRO rewrote records with <b>31000</b> visitors, <b>310</b> bookings,
+                      and <b>₹260</b>
+                      crore in sales, setting a new high for the expo. Backed by <b>76</b> top developers, <b>500+</b>
+                      projects, and
                       leading banks led by SBI, it reaffirmed FAIRPRO’s standing as South India’s most trusted real
-                      estate platform.</p>
+                      estate platform.</p> -->
                   </div>
 
                   <div class="swiper-slide">
-                    <h4>A Record-Defining Edition</h4>
-                    <p>The 15th CREDAI Chennai FAIRPRO rewrote records with <b>46806</b> visitors, <b>313</b> bookings, and <b>₹275</b>
-                      crore in sales, setting a new high for the expo. Backed by <b>66</b> top developers, <b>500+</b> projects, and
-                      leading banks led by SBI, it reaffirmed FAIRPRO’s standing as South India’s most trusted real
-                      estate platform.</p>
+                    <h4>A Vision-Setting Edition</h4>
+                    <ul>
+                      <li>Developers - 66 </li>
+                      <li> Footfalls - 46806 </li>
+                      <li> Bookings - 313 </li>
+                      <li> Revenue - 275 Cr </li>
+                      </li>
+                    </ul>
                   </div>
 
                   <div class="swiper-slide">
-                    <h4>A Record-Defining Edition</h4>
-                    <p>The 14th CREDAI Chennai FAIRPRO rewrote records with <b>29720</b> visitors, <b>224</b> bookings, and <b>₹170</b>
-                      crore in sales, setting a new high for the expo. Backed by <b>73</b> top developers, <b>500+</b> projects, and
-                      leading banks led by SBI, it reaffirmed FAIRPRO’s standing as South India’s most trusted real
-                      estate platform.</p>
+                    <h4>A Comeback Edition</h4>
+                    <ul>
+                      <li>Developers - 73 </li>
+                      <li> Footfalls - 29720 </li>
+                      <li> Bookings - 224 </li>
+                      <li> Revenue - 170 Cr </li>
+                      </li>
+                    </ul>
                   </div>
 
                   <div class="swiper-slide">
-                    <h4>A Record-Defining Edition</h4>
-                    <p>The 13th CREDAI Chennai FAIRPRO rewrote records with <b>32400</b> visitors, <b>303</b> bookings, and <b>₹154</b>
-                      crore in sales, setting a new high for the expo. Backed by <b>66</b> top developers, <b>500+</b> projects, and
-                      leading banks led by SBI, it reaffirmed FAIRPRO’s standing as South India’s most trusted real
-                      estate platform.</p>
+                    <h4>A Landmark Edition</h4>
+                    <ul>
+                      <li>Developers - 66 </li>
+                      <li> Footfalls - 32400 </li>
+                      <li> Bookings - 303 </li>
+                      <li> Revenue - 154 Cr </li>
+                      </li>
+                    </ul>
                   </div>
 
                 </div>
@@ -396,14 +434,203 @@
       </section>
     </div>
 
+
+    <!-- Services Section -->
+    <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+      <section id="services" class="services section">
+        <div class="intro-content text-center">
+          <h2 class="section-heading mb-4">Event Highlights</h2>
+          <p class="section-description">Explore our last year's CREDAI FAIRPRO festive highlights that reflect the happy customers, remarkable
+              success stories, and unforgettable moments.</p>
+        </div>
+         
+            <!--Carousel Gallery-->
+            <div class="carousel-gallery">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a href="assets/img/credai/gallery/1.webp"
+                      data-fancybox="gallery">
+                      <div class="image"
+                        style="background-image: url(assets/img/credai/gallery/1.webp)">
+                        <div class="overlay">
+                          <em class="mdi mdi-magnify-plus"></em>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="assets/img/credai/gallery/2.webp"
+                      data-fancybox="gallery">
+                      <div class="image"
+                        style="background-image: url(assets/img/credai/gallery/2.webp)">
+                        <div class="overlay">
+                          <em class="mdi mdi-magnify-plus"></em>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="assets/img/credai/gallery/3.webp"
+                      data-fancybox="gallery">
+                      <div class="image"
+                        style="background-image: url(assets/img/credai/gallery/3.webp)">
+                        <div class="overlay">
+                          <em class="mdi mdi-magnify-plus"></em>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="assets/img/credai/gallery/4.webp"
+                      data-fancybox="gallery">
+                      <div class="image"
+                        style="background-image: url(assets/img/credai/gallery/4.webp)">
+                        <div class="overlay">
+                          <em class="mdi mdi-magnify-plus"></em>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="assets/img/credai/gallery/5.webp"
+                      data-fancybox="gallery">
+                      <div class="image"
+                        style="background-image: url(assets/img/credai/gallery/5.webp)">
+                        <div class="overlay">
+                          <em class="mdi mdi-magnify-plus"></em>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="assets/img/credai/gallery/6.webp"
+                      data-fancybox="gallery">
+                      <div class="image"
+                        style="background-image: url(assets/img/credai/gallery/6.webp)">
+                        <div class="overlay">
+                          <em class="mdi mdi-magnify-plus"></em>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                   <div class="swiper-slide">
+                    <a href="assets/img/credai/gallery/7.webp"
+                      data-fancybox="gallery">
+                      <div class="image"
+                        style="background-image: url(assets/img/credai/gallery/7.webp)">
+                        <div class="overlay">
+                          <em class="mdi mdi-magnify-plus"></em>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="assets/img/credai/gallery/8.webp"
+                      data-fancybox="gallery">
+                      <div class="image"
+                        style="background-image: url(assets/img/credai/gallery/8.webp)">
+                        <div class="overlay">
+                          <em class="mdi mdi-magnify-plus"></em>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="assets/img/credai/gallery/9.webp"
+                      data-fancybox="gallery">
+                      <div class="image"
+                        style="background-image: url(assets/img/credai/gallery/9.webp)">
+                        <div class="overlay">
+                          <em class="mdi mdi-magnify-plus"></em>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="assets/img/credai/gallery/10.webp"
+                      data-fancybox="gallery">
+                      <div class="image"
+                        style="background-image: url(assets/img/credai/gallery/10.webp)">
+                        <div class="overlay">
+                          <em class="mdi mdi-magnify-plus"></em>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="assets/img/credai/gallery/11.webp"
+                      data-fancybox="gallery">
+                      <div class="image"
+                        style="background-image: url(assets/img/credai/gallery/11.webp)">
+                        <div class="overlay">
+                          <em class="mdi mdi-magnify-plus"></em>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="assets/img/credai/gallery/12.webp"
+                      data-fancybox="gallery">
+                      <div class="image"
+                        style="background-image: url(assets/img/credai/gallery/12.webp)">
+                        <div class="overlay">
+                          <em class="mdi mdi-magnify-plus"></em>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="assets/img/credai/gallery/13.webp"
+                      data-fancybox="gallery">
+                      <div class="image"
+                        style="background-image: url(assets/img/credai/gallery/13.webp)">
+                        <div class="overlay">
+                          <em class="mdi mdi-magnify-plus"></em>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="assets/img/credai/gallery/14.webp"
+                      data-fancybox="gallery">
+                      <div class="image"
+                        style="background-image: url(assets/img/credai/gallery/14.webp)">
+                        <div class="overlay">
+                          <em class="mdi mdi-magnify-plus"></em>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="assets/img/credai/gallery/15.webp"
+                      data-fancybox="gallery">
+                      <div class="image"
+                        style="background-image: url(assets/img/credai/gallery/15.webp)">
+                        <div class="overlay">
+                          <em class="mdi mdi-magnify-plus"></em>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+            <!--#Carousel Gallery-->
+
+      </section>
+    </div>
+
+
     <!-- PARTICIPANTS Section -->
-    <div class="container-fluid aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+    <div class="container-fluid aos-init aos-animate" data-aos="fade-up">
       <section id="features" class="features section">
 
         <div class="tabs-wrapper">
           <div class="section-header">
-            <h2>PARTICIPANTS</h2>
-            <h3>of CREDAI CHENNAI</h3>
+            <h2>OUR PRO Developers</h2>
+            <!-- <h3>You Can Meet</h3> -->
           </div>
 
           <div class="logo-marquee-wrapper">
@@ -414,99 +641,107 @@
               <div class="logo-slide">
 
                 <div class="logo-row">
-                  <img src="assets/img/credai/developers/adityaram-group.png">
-                  <img src="assets/img/credai/developers/akb.png">
-                  <img src="assets/img/credai/developers/AN.png">
-                  <img src="assets/img/credai/developers/Arihant-Logo-Main.png">
-                  <img src="assets/img/credai/developers/Arun-Excello.png">
-                  <img src="assets/img/credai/developers/asset-tree-homes.png">
-                  <img src="assets/img/credai/developers/BBCL.png">
-                  <img src="assets/img/credai/developers/Bhaggyam.png">
-                  <img src="assets/img/credai/developers/Brigade.png">
-                  <img src="assets/img/credai/developers/BSCPL.png">
+                  <img src="assets/img/credai/developers/Adityaram-group.webp">
+                  <img src="assets/img/credai/developers/AKB Logo - FInal.webp">
+                  <img src="assets/img/credai/developers/ALAMO XS REAL.webp">
+                  <img src="assets/img/credai/developers/alliance-group-logo.webp">
+                  <img src="assets/img/credai/developers/Arihant-Logo-Main.webp">
+                  <img src="assets/img/credai/developers/Arun Excello LOGO.webp" style="height: 70px;">
+                  <img src="assets/img/credai/developers/Ashok Nandavanam Logo.webp" style="height: 80px;">
+                  <img src="assets/img/credai/developers/Asset Tree.webp">
+                  <img src="assets/img/credai/developers/BBCL LOGO.webp">
+                  <img src="assets/img/credai/developers/Bhaggyam Logo New.webp">
 
-                  <img src="assets/img/credai/developers/LML_Homes.png">
-                  <img src="assets/img/credai/developers/logo-header-default.png">
-                  <img src="assets/img/credai/developers/mahindra.png">
-                  <img src="assets/img/credai/developers/malles-new.png">
-                  <img src="assets/img/credai/developers/manju.png">
-                  <img src="assets/img/credai/developers/marutham.png">
-                  <img src="assets/img/credai/developers/mp.png">
-                  <img src="assets/img/credai/developers/navins.png">
-                  <img src="assets/img/credai/developers/ncc.png">
-                  <img src="assets/img/credai/developers/newry.png">
+                  <img src="assets/img/credai/developers/Brigade new logo 2025.webp" style="height: 70px;">
+                  <img src="assets/img/credai/developers/BSCPL.webp">
+                  <img src="assets/img/credai/developers/CasaGrand Logo.webp">
+                  <img src="assets/img/credai/developers/DAC Developers Pvt Ltd Logo.webp">
+                  <img src="assets/img/credai/developers/Doshi housing only Logo.webp">
+                  <img src="assets/img/credai/developers/DRA Logo - NEW.webp">
+                  <img src="assets/img/credai/developers/EK HOMES LOGO.webp">
+                  <img src="assets/img/credai/developers/Er Deva logo.webp">
+                  <img src="assets/img/credai/developers/G square new logo.webp">
+                  <img src="assets/img/credai/developers/gp logo.webp" style="height: 70px;">
 
-                  <img src="assets/img/credai/developers/Sri-Lakshmi-Home.png">
-                  <img src="assets/img/credai/developers/Stepsstone.png">
-                  <img src="assets/img/credai/developers/Sugal&Damani.png">
+                  <img src="assets/img/credai/developers/GTK logo.webp" style="height: 70px;">
+                  <img src="assets/img/credai/developers/Harmony Logo.webp">
+                  <img src="assets/img/credai/developers/Isha Homes Logo.webp">
 
-                  <img src="assets/img/credai/developers/VGK-Builders-pdf.png">
-                  <img src="assets/img/credai/developers/vgn.png">
-                   <img src="assets/img/credai/developers/wisdom.png">
+                  <img src="assets/img/credai/developers/Iyra_LOGO.webp">
+                  <img src="assets/img/credai/developers/Jain Logo.webp">
+                  <img src="assets/img/credai/developers/JONES LOGO.webp">
+                  <img src="assets/img/credai/developers/Kerry Estate - Altis logo.webp">
+                  <img src="assets/img/credai/developers/KG  Logo.webp" style="height: 70px;">
                 </div>
 
                 <div class="logo-row">
-                  <img src="assets/img/credai/developers/CASAGRAND.png">
-                  <img src="assets/img/credai/developers/CREATIONS.png">
-                  <img src="assets/img/credai/developers/DAC.png">
-                  <img src="assets/img/credai/developers/dcc.png">
-                  <img src="assets/img/credai/developers/Doshi-housing.png">
-                  <img src="assets/img/credai/developers/DRA.png">
-                  <img src="assets/img/credai/developers/E-logo.png">
-                  <img src="assets/img/credai/developers/Emerald.png">
-                  <img src="assets/img/credai/developers/GP-Homes.png">
-                  <img src="assets/img/credai/developers/lancor.png">
 
-                  <img src="assets/img/credai/developers/Nova.png">
-                  <img src="assets/img/credai/developers/Nu-Tech.png">
-                  <img src="assets/img/credai/developers/Pacifica.png">
-                  <img src="assets/img/credai/developers/provident.png">
-                  <img src="assets/img/credai/developers/Puravankara.png">
-                  <img src="assets/img/credai/developers/Pushkar.png">
-                  <img src="assets/img/credai/developers/Radiance.png">
-                  <img src="assets/img/credai/developers/Rajaratnam.png">
-                  <img src="assets/img/credai/developers/rajkham.png">
-                  <img src="assets/img/credai/developers/Rajparis.png">
+                  <img src="assets/img/credai/developers/KGEYES logo - Jan '24.webp">
+                  <img src="assets/img/credai/developers/Kochar Homes new logo.webp">
+                  <img src="assets/img/credai/developers/lancor logo.webp">
+                  <img src="assets/img/credai/developers/Lifestyle Logo Full Black Vertical.webp" style="height: 70px;">
+                  <img src="assets/img/credai/developers/LML Homes LLP.webp" style="height: 70px;">
+                  <img src="assets/img/credai/developers/Mahindra_CMYK Logo.webp">
+                  <img src="assets/img/credai/developers/Malles Logo.webp">
+                  <img src="assets/img/credai/developers/Manju Groups Logo.webp">
+                  <img src="assets/img/credai/developers/Marutham Group.webp">
 
-                  <img src="assets/img/credai/developers/svh.png">
-                  <img src="assets/img/credai/developers/The-Nest.png">
-                  <img src="assets/img/credai/developers/tulive.png">
+                  <img src="assets/img/credai/developers/MP_developers logo.webp">
+                  <img src="assets/img/credai/developers/Navin's Logo.webp">
+                  <img src="assets/img/credai/developers/NCC Urban.webp">
+                  <img src="assets/img/credai/developers/Nest Logo.webp">
+                  <img src="assets/img/credai/developers/Newry Properties Logo.webp">
+                  <img src="assets/img/credai/developers/Nova Logo.webp">
+                  <img src="assets/img/credai/developers/Nu-Tech logo.webp" style="height: 70px;">
+                  <img src="assets/img/credai/developers/ocean logo.webp" style="height: 70px;">
+                  <img src="assets/img/credai/developers/Omshakthy logo.webp" style="height: 70px;">
+                  <img src="assets/img/credai/developers/Pacifica Logo.webp">
 
-                  <img src="assets/img/credai/developers/vijay-raja.png">
-                  <img src="assets/img/credai/developers/viva.png">
+                  <img src="assets/img/credai/developers/Pragnya_EP_Logo.webp" style="height: 70px;">
+                  <img src="assets/img/credai/developers/Prestige Group_Master Logo_Light.webp" style="height: 70px;">
+                  <img src="assets/img/credai/developers/Puravankara Logo.webp">
 
+                  <img src="assets/img/credai/developers/Radiance Logo.webp">
+                  <img src="assets/img/credai/developers/Rajaratnam Logo - RCPL.webp">
+                  <img src="assets/img/credai/developers/Rajkam_Logo.webp">
+                  <img src="assets/img/credai/developers/Rajparis Logo.webp">
+                  <img src="assets/img/credai/developers/Ramy Wavoo Developer - RWD Logo.webp">
+                  <img src="assets/img/credai/developers/Raunaq Logo - file.webp">
                 </div>
 
                 <div class="logo-row">
-                  <img src="assets/img/credai/developers/GTK-Foundations.png">
-                  <img src="assets/img/credai/developers/Harmony.png">
-                  <img src="assets/img/credai/developers/Isha-Homes.png">
-                  <img src="assets/img/credai/developers/iyra.png">
-                  <img src="assets/img/credai/developers/jain-housing.png">
-                  <img src="assets/img/credai/developers/Jones.png">
-                  <img src="assets/img/credai/developers/KG.png">
-                  <img src="assets/img/credai/developers/kgeyes.png">
-                  <img src="assets/img/credai/developers/kochar-homes.png">
-                  <img src="assets/img/credai/developers/Lifestyle.png">
 
-                  <img src="assets/img/credai/developers/Raunaq-Logo.png">
-                  <img src="assets/img/credai/developers/Ruby_Builders.png">
-                  <img src="assets/img/credai/developers/RWD.png">
-                  <img src="assets/img/credai/developers/S&P.png">
-                  <img src="assets/img/credai/developers/Sameera.png">
-                  <img src="assets/img/credai/developers/sameerafuture.png">
-                  <img src="assets/img/credai/developers/SanthaBuild-Tech.png">
-                  <img src="assets/img/credai/developers/sidharth.png">
-                  <img src="assets/img/credai/developers/SIS.png">
-                  <img src="assets/img/credai/developers/sreerosh.png">
+                  <img src="assets/img/credai/developers/RedBrick Logo.webp">
+                  <img src="assets/img/credai/developers/Ruby Logo.webp">
+                  <img src="assets/img/credai/developers/S&P logo Final with colour code.webp">
+                  <img src="assets/img/credai/developers/Sameera_Logo.webp">
+                  <img src="assets/img/credai/developers/Shriram LOGO NEW colored version.webp">
+                  <img src="assets/img/credai/developers/Sidharth NEW LOGO.webp">
+                  <img src="assets/img/credai/developers/silversky final logo.webp">
 
-                  <img src="assets/img/credai/developers/urbanrise-n.png">
-                  <img src="assets/img/credai/developers/Urban-Tree.png">
-                  <img src="assets/img/credai/developers/vasanthbuilder.png">
+                  <img src="assets/img/credai/developers/South India Shelters - SIS NEW LOGO.webp">
+                  <img src="assets/img/credai/developers/SPR INDIA BUILDING WITH PURPOSE_Horizontal1.webp">
+                  <img src="assets/img/credai/developers/Sree Venkateswara Homes Logo.webp">
+                  <img src="assets/img/credai/developers/Sreerosh-Properties-Logo.webp" style="height: 70px;">
+                  <img src="assets/img/credai/developers/Sri Lakshmi Homes Logo.webp">
+                  <img src="assets/img/credai/developers/STEPSSTONE LOGO.webp">
+                  <img src="assets/img/credai/developers/TRAVENTURE LOGO TM FINAL.webp">
+                  <img src="assets/img/credai/developers/True Value Homes - TVH Logo.webp" style="height: 70px;">
+                  <img src="assets/img/credai/developers/Tulive Logo.webp">
+                  <img src="assets/img/credai/developers/TVS Emerald logo.webp">
 
-                  <img src="assets/img/credai/developers/vnr.png">
-                  <img src="assets/img/credai/developers/Voora.png">
-                 
+                  <img src="assets/img/credai/developers/Urban Tree_Logo.webp">
+                  <img src="assets/img/credai/developers/urbando-new.webp" style="height: 70px;">
+                  <img src="assets/img/credai/developers/Urbanrise_WaterLeaves_Final_Full_sized.webp">
+
+                  <img src="assets/img/credai/developers/VGK_Logo.webp">
+                  <img src="assets/img/credai/developers/VGN LOGO.webp">
+                  <img src="assets/img/credai/developers/vijayraja logo hi - res.webp" style="height: 70px;">
+                  <img src="assets/img/credai/developers/viva logo high res.webp">
+                  <img src="assets/img/credai/developers/VNR_LOGO.webp">
+                  <img src="assets/img/credai/developers/Voora Logo.webp">
+                  <img src="assets/img/credai/developers/wisdom logo.webp">
+
                 </div>
 
               </div>
@@ -520,16 +755,15 @@
     </div>
 
     <!--Partners Section-->
-    <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+    <div class="container-fluid" data-aos="fade-up">
       <section class="partners-section" id="partners">
 
         <div class="row g-5 align-items-stretch">
 
           <!-- LEFT COLUMN -->
-          <div class="col-lg-4">
+          <!-- <div class="col-lg-4">
             <div class="left-partners h-100">
 
-              <!-- TITLE SPONSOR -->
               <div class="partner-main-card-left">
                 <h3 class="partner-heading underline">TITLE SPONSOR</h3>
                 <div class="logo-box-left big-logo">
@@ -544,39 +778,42 @@
 
 
             </div>
-          </div>
+          </div> -->
 
           <!-- RIGHT COLUMN -->
-          <div class="col-lg-8">
+          <div class="col-lg-12">
             <div class="right-partners mt-4">
 
               <!-- OFFICIAL PARTNERS -->
-              <h3 class="partner-heading outside">OFFICIAL PARTNERS</h3>
+              <h3 class="partner-heading outside">TITLE SPONSOR</h3>
               <div class="partner-main-card">
-                <div class="row text-center">
-                  <div class="col-md-4 col-6">
-                    <div class="logo-box"><img src="assets/img/credai/sponsor/guntu.jpg"></div>
+                <div class="row justify-content-center">
+                  <div class="col-md-12 col-12">
+                    <div class="logo-box"><img src="assets/img/credai/sponsor/New/SBI Logo 2026.webp" alt=""></div>
                   </div>
-                  <div class="col-md-4 col-6">
-                    <div class="logo-box"><img src="assets/img/credai/sponsor/Veda.jpg"></div>
+
+                </div>
+              </div>
+
+              <!-- OFFICIAL PARTNERS -->
+              <h3 class="partner-heading outside mt-5">OFFICIAL PARTNERS</h3>
+              <div class="partner-main-card">
+                <div class="row justify-content-center">
+                  <div class="col-md-2 col-6">
+                    <div class="logo-box"><img src="assets/img/credai/sponsor/New/hardworker.webp"></div>
                   </div>
-                  <div class="col-md-4 col-6">
-                    <div class="logo-box"><img src="assets/img/credai/sponsor/greenlam.png"></div>
+                  <div class="col-md-2 col-6">
+                    <div class="logo-box"><img src="assets/img/credai/sponsor/New/Jaquargroup-logo.webp"></div>
                   </div>
-                  <div class="col-md-4 col-6">
-                    <div class="logo-box"><img src="assets/img/credai/sponsor/jaquar-.webp"></div>
+                  <div class="col-md-2 col-6">
+                    <div class="logo-box"><img src="assets/img/credai/sponsor/New/Vedapile_Logo 2.webp"></div>
                   </div>
-                  <div class="col-md-4 col-6">
-                    <div class="logo-box"><img src="assets/img/credai/sponsor/knest.png"></div>
-                  </div>
-                  <div class="col-md-4 col-6">
-                    <div class="logo-box"><img src="assets/img/credai/sponsor/somany.png"></div>
-                  </div>
+
                 </div>
               </div>
 
               <!-- BANKING PARTNERS -->
-              <h3 class="partner-heading outside mt-5">BANKING PARTNERS</h3>
+              <!-- <h3 class="partner-heading outside mt-5">BANKING PARTNERS</h3>
               <div class="partner-main-card">
                 <div class="row text-center">
                   <div class="col-md-3 col-6">
@@ -592,22 +829,22 @@
                     <div class="logo-box"><img src="assets/img/credai/sponsor/canara.webp"></div>
                   </div>
                 </div>
-              </div>
+              </div> -->
 
               <!-- ASSOCIATE PARTNERS -->
               <h3 class="partner-heading outside mt-5">ASSOCIATE PARTNERS</h3>
               <div class="partner-main-card">
-                <div class="row text-center">
-                  <div class="col-md-4 col-6">
-                    <div class="logo-box"><img src="assets/img/credai/sponsor/john.webp"></div>
+                <div class="row justify-content-center">
+                  <div class="col-md-2 col-6">
+                    <div class="logo-box"><img src="assets/img/credai/sponsor/New/logo Prince Pipes.webp"></div>
                   </div>
-                  <div class="col-md-4 col-6">
-                    <div class="logo-box"><img src="assets/img/credai/sponsor/fixit.webp"></div>
+                  <div class="col-md-2 col-6">
+                    <div class="logo-box"><img src="assets/img/credai/sponsor/New/Polycab Logo.webp"></div>
                   </div>
-                  <div class="col-md-4 col-6">
-                    <div class="logo-box"><img src="assets/img/credai/sponsor/magick.png"></div>
+                  <div class="col-md-2 col-6">
+                    <div class="logo-box"><img src="assets/img/credai/sponsor/New/New Somany Logo.webp"></div>
                   </div>
-                  <div class="col-md-4 col-6">
+                  <!-- <div class="col-md-4 col-6">
                     <div class="logo-box"><img src="assets/img/credai/sponsor/wesmarc.jpg"></div>
                   </div>
                   <div class="col-md-4 col-6">
@@ -616,12 +853,70 @@
                   <div class="col-md-4 col-6">
                     <div class="logo-box"><img src="assets/img/credai/sponsor/great-white.webp">
                     </div>
+                  </div> -->
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-6">
+                  <h3 class="partner-heading outside mt-5">INAUGURATION & PRE-LAUNCH PARTNER</h3>
+                  <div class="partner-main-card">
+                    <div class="row justify-content-center">
+                      <div class="col-md-12 col-12">
+                        <div class="logo-box"><img src="assets/img/credai/sponsor/New/greatwhiteelectricals-logo.webp">
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <h3 class="partner-heading outside mt-5">MD’s LUNCH AREA PARTNER</h3>
+                  <div class="partner-main-card">
+                    <div class="row justify-content-center">
+                      <div class="col-md-12 col-12">
+                        <div class="logo-box"><img src="assets/img/credai/sponsor/New/PULKIT LOGO.webp"
+                            style="max-height: 100px;"></div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <h3 class="partner-heading outside mt-5">DIGITAL PARTNER</h3>
+                  <div class="partner-main-card">
+                    <div class="row justify-content-center">
+                      <div class="col-md-12 col-12">
+                        <div class="logo-box"><img src="assets/img/credai/sponsor/New/AGLHLOGO.webp"
+                            style="max-height: 100px;"></div>
+                        <!-- <h4>AdGlobal 360 India Pvt Ltd.</h4> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <h3 class="partner-heading outside mt-5">HOSPITALITY PARTNERS</h3>
+                  <div class="partner-main-card">
+                    <div class="row justify-content-center">
+                      <div class="col-md-4 col-6">
+                        <div class="logo-box"><img src="assets/img/credai/sponsor/New/Perfectware.webp"></div>
+                      </div>
+                      <div class="col-md-4 col-6">
+                        <div class="logo-box"><img src="assets/img/credai/sponsor/New/QFLX_LOGO.webp"
+                            style="max-height: 85px;"></div>
+                      </div>
+                      <div class="col-md-4 col-6">
+                        <div class="logo-box"><img src="assets/img/credai/sponsor/New/RAYMIX LOGO.webp"
+                            style="max-height: 85px;"></div>
+                      </div>
+
+                    </div>
                   </div>
                 </div>
               </div>
 
               <!-- HOSPITALITY PARTNERS -->
-              <h3 class="partner-heading outside mt-5">HOSPITALITY PARTNERS</h3>
+              <!-- <h3 class="partner-heading outside mt-5">HOSPITALITY PARTNERS</h3>
               <div class="partner-main-card">
                 <div class="row text-center">
                   <div class="col-md-4 col-6">
@@ -635,7 +930,7 @@
                   </div>
 
                 </div>
-              </div>
+              </div> -->
 
             </div>
           </div>
@@ -646,45 +941,9 @@
       </section>
     </div>
 
-    <!-- Services Section -->
-    <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
-      <section id="services" class="services section">
-
-        <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="row align-items-center">
-            <div class="col-lg-7 order-lg-1 order-2">
-              <div class="hero-visual" data-aos="fade-left" data-aos-delay="150">
-                <img src="assets/img/credai/sponsor-left.png" alt="Services" class="img-fluid">
-              </div>
-            </div>
-            <div class="col-lg-5 order-lg-2 order-1">
-              <div class="intro-content" data-aos="fade-right" data-aos-delay="100">
-                <!-- <div class="section-badge mb-3" data-aos="zoom-in" data-aos-delay="50">
-                                <i class="bi bi-star-fill"></i>
-                                <span>WHAT WE DO</span>
-                            </div> -->
-                <h2 class="section-heading mb-4">Find Your Ideal Property</h2>
-                <p class="section-description mb-4">The welcome screen greets you with clear
-                  instructions.
-                  Everything you need is right in front of you.</p>
-                <!-- <a href="#" class="cta-button" data-aos="fade-right" data-aos-delay="200">
-                                Explore Our Work
-                            </a> -->
-              </div>
-            </div>
-
-          </div>
-
-
-
-        </div>
-
-      </section>
-    </div>
 
     <!-- QR Section -->
-    <section class="free-entry-section" id="freeentry" data-aos="fade-up" data-aos-delay="100">
+    <section class="free-entry-section" id="freeentry" data-aos="fade-up">
       <div class="container">
         <div class="row align-items-center">
 
@@ -700,7 +959,7 @@
           <!-- RIGHT : CONTENT -->
           <div class="col-lg-8 col-md-6">
             <div class="qr-code d-block d-lg-none mb-4">
-              <img src="assets/img/credai/new-qr-code.webp" width="50%" alt="QR Code" class="img-fluid">
+              <img src="assets/img/credai/register link qr.png" width="50%" alt="QR Code" class="img-fluid">
             </div>
             <div class="free-entry-content">
               <h2>Get free entry tickets</h2>
@@ -717,60 +976,14 @@
 
 
   </main>
-
-  <footer class="custom-footer" data-aos="fade-up" data-aos-delay="100">
-    <div class="container">
-      <div class="row align-items-start">
-
-        <!-- MAP -->
-        <div class="col-lg-4 col-md-12">
-          <div class="footer-map">
-            <iframe
+<div class="container-fluid p-0">
+   <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15549.31040514513!2d80.190933!3d13.014798!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267345ceaf5c7%3A0x96249ade3e76037c!2sChennai%20Trade%20Centre%2C%20CHENNAI%20TRADE%20CENTRE%2C%20Ramapuram%2C%20Nandambakkam%2C%20Chennai%2C%20Tamil%20Nadu%20600089!5e0!3m2!1sen!2sin!4v1767610453219!5m2!1sen!2sin"
-              width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+              width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-        </div>
-
-        <!-- GET IN TOUCH -->
-        <div class="col-lg-5 col-md-6 get-in-touch">
-          <h5>Get in Touch</h5>
-
-          <!-- EMAIL -->
-          <div class="contact-row">
-            <i class="bi bi-envelope"></i>
-            <div class="contact-text">
-              <span>help@credaichennai.in</span>
-              <span>info@credaichennai.in</span>
-            </div>
-          </div>
-
-          <!-- PHONE -->
-          <div class="contact-row">
-            <i class="bi bi-telephone"></i>
-            <div class="contact-text">
-              <span>044 2435 0129</span>
-              <span>044 2435 0129</span>
-            </div>
-          </div>
-        </div>
-
-
-        <!-- NEWSLETTER -->
-        <div class="col-lg-3 col-md-6 newsletter-col">
-          <h5>Join a Newsletter</h5>
-
-          <form>
-            <!-- <label>Your Email</label> -->
-            <input type="email" placeholder="Your Email" required>
-
-            <!-- <input type="email" placeholder="Name*" required> -->
-            <button type="submit">SUBMIT</button>
-          </form>
-        </div>
-
-      </div>
-
+</div>
+  <footer class="custom-footer" data-aos="fade-up">
+    <div class="container-fluid">
       <!-- COPYRIGHT (GLOBAL – LAST ALWAYS) -->
       <div class="footer-copy-wrapper text-center mt-4">
         <p>Copyrights 2026 CREDAI Chennai | All Rights Reserved</p>
@@ -778,95 +991,201 @@
     </div>
   </footer>
 
-     <div class="bottom_button d-lg-none d-md-none d-sm-block d-block">
-            <div class="formButton"><a href="#" data-bs-toggle="modal" data-bs-target="#registerModal"  class="blink"><i class="fa fa-phone"></i> Get Your Free VIP Pass</a></div>
-            <!-- <div class="contactButtom"><a href="#mainform" onclick="myFunction()" class="blink_mes"><i
+  <div class="bottom_button d-lg-none d-md-none d-sm-block d-block">
+    <div class="formButton"><a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" class="blink"><i
+          class="fa fa-phone"></i> Get Your Free VIP Pass</a></div>
+    <!-- <div class="contactButtom"><a href="#mainform" onclick="myFunction()" class="blink_mes"><i
                         class="fa fa-list"></i>
                     Enquire Now</a></div> -->
-        </div>
+  </div>
 
   <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content rounded-4">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4">
 
-      <!-- Modal Header -->
-      <div class="modal-header border-0">
-        <h5 class="modal-title" id="registerModalLabel">Register Your Interest</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
+        <!-- Modal Header -->
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="registerModalLabel">Register Your Interest</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
 
-      <!-- Modal Body -->
-      <div class="modal-body">
+        <!-- Modal Body -->
+        <div class="modal-body">
 
-          <form name="form1" action="" id="submitForm" method="post" class="full-form-container main-form"
-            onsubmit="return validate();">
+          <form name="form" action="" id="submitForm-popup" method="post" class="full-form-container main-form"
+            onsubmit="return validatepopup();">
 
             <div class="form-group">
-              <input type="text" id="name" name="name" class="form-control form-text user-icon" placeholder="Name"
+              <input type="text" id="name1" name="name" class="form-control form-text user-icon" placeholder="Name"
                 onkeydown="return /[a-z]/i.test(event.key)">
+              <small class="error" id="name1Error"></small>
             </div>
+            <div class="form-group">
+              <input type="tel" id="phone1" name="phone" class="form-control form-text email-icon" placeholder="Mobile">
+              <small class="error" id="phone1Error"></small>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email1" name="email" class="form-control form-text email-icon"
+                placeholder="Email">
+              <small class="error" id="email1Error"></small>
+            </div>
+            <input type="hidden" name="url" class="pageUrl">
 
-            <div class="form-group">
-              <input type="email" id="email" name="email" class="form-control form-text email-icon" placeholder="Email">
-            </div>
-
-            <div class="form-group">
-              <input type="tel" id="phone" name="phone" class="form-control form-text email-icon" placeholder="Mobile"
-                maxlength="10">
-            </div>
-
-            <div class="form-group">
-              <select name="budget" id="budjet" class="form-control form-text email-icon" required="">
-                <option value="">Budget*</option>
-                <option value="20-40L">20-40L</option>
-                <option value="40-60L">40-60L</option>
-                <option value="60-80L">60-80L</option>
-                <option value="80-1Cr">80-1Cr</option>
-                <option value="Above 1Cr">Above 1Cr</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <select name="property" id="date" class="form-control form-text email-icon" required="">
-                <option value="">Type Of Property*</option>
-                <option value="Apartments">Apartments</option>
-                <option value="Villas">Villas</option>
-                <option value="Plots">Plots</option>
-                <option value="Commercial Spaces">Commercial Spaces</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <select name="visit" id="date" class="form-control form-text email-icon" required="">
-                <option value="">Date of Visit*</option>
-                <option value="February 14">February 20</option>
-                <option value="February 15">February 21</option>
-                <option value="February 16">February 22</option>
-              </select>
-            </div>
 
 
             <div class="form-btn text-center mt-2">
-              <input class="" type="submit" value="Register" id="submitbtn">
+              <input class="" type="submit" value="Register" id="submitbtnpopup">
             </div>
 
           </form>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+  <!-- intl-tel-input JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js"></script>
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    const phoneInputs = [
+      document.querySelector("#phone"),
+      document.querySelector("#phone1")
+    ];
+
+    const itiInstances = [];
+
+    // Initialize intl-tel-input for each phone field
+    phoneInputs.forEach(input => {
+      if (!input) return;
+
+      const iti = window.intlTelInput(input, {
+        initialCountry: "in",
+        separateDialCode: true,
+        nationalMode: false,
+        preferredCountries: ["in", "us", "gb", "ae"],
+        autoPlaceholder: "polite",
+      });
+
+      itiInstances.push({ input, iti });
+    });
+
+    // Handle multiple form submits
+    ["submitForm", "submitForm-popup"].forEach(formId => {
+      const form = document.getElementById(formId);
+      if (!form) return;
+
+      form.addEventListener("submit", function () {
+        itiInstances.forEach(({ input, iti }) => {
+          input.value = iti.getNumber(); // +91XXXXXXXXXX
+        });
+      });
+    });
+  </script>
+
+  <script>
+    $(":input").focus(function () {
+      $(this).css("border", "1px solid #7c7c7c")
+        .removeClass("error-border");
+      $(this).next(".error").text("");
+    });
+
+    function showError(inputId, message) {
+      $("#" + inputId).addClass("error-border");
+      $("#" + inputId + "Error").text(message);
+    }
+
+    function validate() {
+
+      let name = $('#name').val().trim();
+      let phone = $('#phone').val().trim();
+      let email = $('#email').val().trim();
+
+      let phoneFilter = /^[1-9][0-9]{9}$/;
+      let emailFilter = /^([a-zA-Z0-9_\.\-])+@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+      if (name === '') {
+        showError('name', 'Name field is mandatory');
+        return false;
+      }
+
+      if (phone === '') {
+        showError('phone', 'Phone field is mandatory');
+        return false;
+      }
+
+      if (!phoneFilter.test(phone)) {
+        showError('phone', 'Please enter a valid mobile number');
+        return false;
+      }
+
+      if (email === '') {
+        showError('email', 'Email field is mandatory');
+        return false;
+      }
+
+      if (!emailFilter.test(email)) {
+        showError('email', 'Please enter a valid email ID');
+        return false;
+      }
+      document.activeElement
+        .closest("form")
+        .dataset.validated = "true";
+      return true;
+    }
+
+    function validatepopup() {
+
+      let name = $('#name1').val().trim();
+      let phone = $('#phone1').val().trim();
+      let email = $('#email1').val().trim();
+
+      let phoneFilter = /^[1-9][0-9]{9}$/;
+      let emailFilter = /^([a-zA-Z0-9_\.\-])+@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+      if (name === '') {
+        showError('name1', 'Name field is mandatory');
+        return false;
+      }
+
+      if (phone === '') {
+        showError('phone1', 'Phone field is mandatory');
+        return false;
+      }
+
+      if (!phoneFilter.test(phone)) {
+        showError('phone1', 'Please enter a valid mobile number');
+        return false;
+      }
+
+      if (email === '') {
+        showError('email1', 'Email field is mandatory');
+        return false;
+      }
+
+      if (!emailFilter.test(email)) {
+        showError('email1', 'Please enter a valid email ID');
+        return false;
+      }
+      document.activeElement
+        .closest("form")
+        .dataset.validated = "true";
+      return true;
+    }
+  </script>
+
   <script>
     const targetDate = new Date("2026-02-20T10:00:00").getTime();
 
@@ -895,8 +1214,49 @@
     updateCounter();
     setInterval(updateCounter, 1000);
   </script>
+
   <script>
-    const API_URL = "https://script.google.com/macros/s/AKfycbwMvkxRhRPjHulFd411MSTULrT9LwLYxaig_61q8Ov9658YjSh_eFnUkW6SVM1FMS4O/exec";
+    document.querySelectorAll(".pageUrl").forEach(input => {
+      input.value = window.location.href;
+    });
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbxRXUwhwZNhcz7FSdyaqvcdIcR_20FYfkpLB4UFWjwCAzHWyId_24rvHVjjd3XsQgam/exec";
+    document.querySelectorAll(".main-form").forEach((form) => {
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        // Get form field valuesf
+        const name = form.name.value.trim();
+        const phone = form.phone.value.trim();
+        const email = form.email.value.trim();
+
+        // ✅ ONLY check if validation already succeeded
+        if (form.dataset.validated !== "true") {
+          return; // validation not completed → stop
+        }
+        const formData = new FormData(form);
+
+        // 1️⃣ Send to Google Script
+        fetch(scriptURL, { method: "POST", body: formData })
+          .then((res) => console.log("✅ Sent to Google Script"))
+          .catch((err) => console.error("❌ Google Script Error:", err));
+
+        // 2️⃣ Send to PHP backend
+        fetch(form.action, { method: "POST", body: formData })
+          .then((res) => {
+            console.log("✅ Sent to PHP");
+            window.location.href = "thankyou.html"; // redirect after both succeed
+          })
+          .catch((err) => {
+            console.error("❌ PHP Error:", err);
+            alert("Something went wrong. Please try again!");
+          });
+      });
+    });
+  </script>
+  <script>
+    const API_URL = "https://script.google.com/macros/s/AKfycby1YqGH-K--uIYbBe_NUrjjvrne7yebGWF_d_Eqp-5-Yx_ehB1f_2JXeV0a9udAusJ1/exec";
 
     async function fetchEntries() {
       try {
@@ -938,8 +1298,50 @@
 
       breakpoints: {
         0: { slidesPerView: 1.5 },
-        992: { slidesPerView: 3.5 }
+        992: { slidesPerView: 4.5 }
       }
+    });
+  </script>
+  <script>
+    $(function () {
+
+      var swiper = new Swiper('.carousel-gallery .swiper-container', {
+        effect: 'slide',
+        loop: true,
+        speed: 900,
+        slidesPerView: 5,
+        spaceBetween: 20,
+        simulateTouch: true,
+        autoplay: {
+          delay: 5000,
+          stopOnLastSlide: false,
+          disableOnInteraction: false
+        },
+        pagination: {
+          el: '.carousel-gallery .swiper-pagination',
+          clickable: true
+        },
+        breakpoints: {
+          // when window width is <= 320px
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 5
+          },
+          // when window width is <= 480px
+          425: {
+            slidesPerView: 2,
+            spaceBetween: 10
+          },
+          // when window width is <= 640px
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 20
+          }
+        }
+      }); 
+
+
+
     });
   </script>
   <script>
@@ -1013,15 +1415,19 @@
     });
   </script>
   <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    setTimeout(function () {
-      const modal = new bootstrap.Modal(
-        document.getElementById("registerModal")
-      );
-      modal.show();
-    }, 10000); // 10 seconds
-  });
-</script>
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(function () {
+        const modal = new bootstrap.Modal(
+          document.getElementById("registerModal")
+        );
+        modal.show();
+      }, 10000); // 10 seconds
+    });
+  </script>
+  <script src='https://stagingagldashboard.adv8.co/common/js/webform_self.js'>
+  </script>
+  <script>WEBFORM.init(['form', 1902]);
+    WEBFORM.loadForm();</script>
 </body>
 
 </html>
