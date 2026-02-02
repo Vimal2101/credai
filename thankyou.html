@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>CREDAI Fairpro 2026 | Chennai’s Premier Property Expo</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.ico" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
+  <!-- intl-tel-input CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" />
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="assets/img/credai/credai-logo.png" alt="">
+        <!-- <h1 class="sitename">Landify</h1> -->
+      </a>
+
+      <nav id="navmenu" class="navmenu ms-auto">
+        <ul>
+          <li><a href="#about"><i class="bi bi-house-door-fill"></i> About</a></li>
+          <li><a href="#features"><i class="bi bi-building-fill"></i>Particpants</a></li>
+          <li><a href="#partners"><i class="bi bi-hand-thumbs-up-fill"></i> Partners</a></li>
+
+        </ul>
+        <!-- <i class="mobile-nav-toggle d-xl-none bi bi-list"></i> -->
+      </nav>
+
+      <a class="btn-getstarted auto-shine-btn" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Get your
+        VIP Pass</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+
+
+    <div class="container-fluid" data-aos="fade-right">
+      <section id="hero" class="hero section">
+        <div class="hero-img">
+          <img src="assets/img/credai/banner/web-banner.png" class="img-fluid d-lg-block d-sm-block d-sm-none d-none"
+            width="100%" alt="banner">
+          <img src="assets/img/credai/banner/mob-banner.png" class="img-fluid d-lg-none d-sm-block d-sm-block d-block"
+            width="100%" alt="banner">
+        </div>
+        <div class="hero-content">
+
+          <div class="hero-actions">
+            <a href="#" class="d-none d-md-block d-lg-block mb-3"><i class="bi bi-calendar3"></i> Feb 20th, 21th and
+              22th 2026</a>
+            <a href="#" class="d-none d-md-block d-lg-block"><i class="bi bi-geo-alt-fill"></i> Chennai Trade Center</a>
+
+            <div class="reg mt-2">
+              <h4 class="counter-number">
+                <span id="entryCount">0</span><br>
+                <small class="counter-text"> Registrations</small>
+              </h4>
+            </div>
+
+
+            <div class="counter-box mt-2">
+
+              <div class="time-grid">
+                <div class="time-box">
+                  <div class="time-item"><span id="days">0</span></div>
+                  <small>Days</small>
+                </div>
+
+                <div class="time-box">
+                  <div class="time-item"><span id="hours">0</span></div>
+                  <small>Hours</small>
+                </div>
+
+                <div class="time-box">
+                  <div class="time-item"><span id="minutes">0</span></div>
+                  <small>Minutes</small>
+                </div>
+
+                <div class="time-box">
+                  <div class="time-item"><span id="seconds">0</span></div>
+                  <small>Seconds</small>
+                </div>
+
+
+              </div>
+              <p class="time-grid-paragraph">Timer is Running<br>Hurry Up!</p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="formDiv" id="formDiv" data-aos="fade-left" data-aos-duration="800">
+
+          <div class="formDivLogo text-center">
+            <!-- <img src="asset/img/kg/kgLogo.png"> -->
+             <h4>Thank you for registering. You will receive your VIP pass on your registered WhatsApp number.</h4>
+          </div>
+
+          <!-- <form name="form" action="" id="submitForm" method="post" class="full-form-container main-form"
+            onsubmit="return validate();">
+
+            <div class="form-group">
+              <input type="text" id="name" name="name" class="form-control form-text user-icon" placeholder="Name"
+                onkeydown="return /[a-z]/i.test(event.key)">
+              <small class="error" id="nameError"></small>
+            </div>
+            <div class="form-group">
+              <input type="tel" id="phone" name="phone" class="form-control form-text email-icon" placeholder="Mobile">
+              <small class="error" id="phoneError"></small>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" class="form-control form-text email-icon" placeholder="Email">
+              <small class="error" id="emailError"></small>
+            </div>
+
+
+         
+            <div class="form-group">
+              <select name="budget" id="budjet" class="form-control form-text email-icon" required="">
+                <option value="">Budget*</option>
+                <option value="20-40L">20-40L</option>
+                <option value="40-60L">40-60L</option>
+                <option value="60-80L">60-80L</option>
+                <option value="80-1Cr">80-1Cr</option>
+                <option value="Above 1Cr">Above 1Cr</option>
+              </select>
+            </div> 
+            <div class="form-group">
+              <select name="property" id="date" class="form-control form-text email-icon">
+                <option value="">Type Of Property</option>
+                <option value="Apartments">Apartments</option>
+                <option value="Villas">Villas</option>
+                <option value="Plots">Plots</option>
+                <option value="Commercial Spaces">Commercial Spaces</option>
+              </select>
+            </div>
+            <input type="hidden" name="url" class="pageUrl">
+          <div class="form-group">
+              <select name="visit" id="date" class="form-control form-text email-icon" required="">
+                <option value="">Date of Visit*</option>
+                <option value="February 14">February 20</option>
+                <option value="February 15">February 21</option>
+                <option value="February 16">February 22</option>
+              </select>
+            </div> 
+
+
+            <div class="form-btn text-center">
+              <input class="" type="submit" value="Submit" id="submitbtn">
+            </div>
+
+          </form> -->
+
+
+        </div>
+
+      </section><!-- /Hero Section -->
+    </div>
+
+
+
+
+
+  </main>
+  <div class="container-fluid p-0">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15549.31040514513!2d80.190933!3d13.014798!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267345ceaf5c7%3A0x96249ade3e76037c!2sChennai%20Trade%20Centre%2C%20CHENNAI%20TRADE%20CENTRE%2C%20Ramapuram%2C%20Nandambakkam%2C%20Chennai%2C%20Tamil%20Nadu%20600089!5e0!3m2!1sen!2sin!4v1767610453219!5m2!1sen!2sin"
+      width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <footer class="custom-footer" data-aos="fade-up">
+    <div class="container-fluid">
+      <!-- COPYRIGHT (GLOBAL – LAST ALWAYS) -->
+      <div class="footer-copy-wrapper text-center mt-4">
+        <p>Copyrights 2026 CREDAI Chennai | All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="bottom_button d-lg-none d-md-none d-sm-block d-block">
+    <div class="formButton"><a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" class="blink"> Get your
+        VIP Pass</a></div>
+    <!-- <div class="contactButtom"><a href="#mainform" onclick="myFunction()" class="blink_mes"><i
+                        class="fa fa-list"></i>
+                    Enquire Now</a></div> -->
+  </div>
+<!-- 
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4">
+
+  
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="registerModalLabel">Register Your Interest</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+
+          <form name="form" action="" id="submitForm-popup" method="post" class="full-form-container main-form"
+            onsubmit="return validatepopup();">
+
+            <div class="form-group">
+              <input type="text" id="name1" name="name" class="form-control form-text user-icon" placeholder="Name"
+                onkeydown="return /[a-z]/i.test(event.key)">
+              <small class="error" id="name1Error"></small>
+            </div>
+            <div class="form-group">
+              <input type="tel" id="phone1" name="phone" class="form-control form-text email-icon" placeholder="Mobile">
+              <small class="error" id="phone1Error"></small>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email1" name="email" class="form-control form-text email-icon"
+                placeholder="Email">
+              <small class="error" id="email1Error"></small>
+            </div>
+                  <div class="form-group">
+              <select name="property" id="date" class="form-control form-text email-icon">
+                <option value="">Type Of Property</option>
+                <option value="Apartments">Apartments</option>
+                <option value="Villas">Villas</option>
+                <option value="Plots">Plots</option>
+                <option value="Commercial Spaces">Commercial Spaces</option>
+              </select>
+            </div>
+            <input type="hidden" name="url" class="pageUrl">
+
+
+
+            <div class="form-btn text-center mt-2">
+              <input class="" type="submit" value="Register" id="submitbtnpopup">
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+  <!-- intl-tel-input JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js"></script>
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    const phoneInputs = [
+      document.querySelector("#phone"),
+      document.querySelector("#phone1")
+    ];
+
+    const itiInstances = [];
+
+    // Initialize intl-tel-input for each phone field
+    phoneInputs.forEach(input => {
+      if (!input) return;
+
+      const iti = window.intlTelInput(input, {
+        initialCountry: "in",
+        separateDialCode: true,
+        nationalMode: false,
+        preferredCountries: ["in", "us", "gb", "ae"],
+        autoPlaceholder: "polite",
+      });
+
+      itiInstances.push({ input, iti });
+    });
+
+    // Handle multiple form submits
+    ["submitForm", "submitForm-popup"].forEach(formId => {
+      const form = document.getElementById(formId);
+      if (!form) return;
+
+      form.addEventListener("submit", function () {
+        itiInstances.forEach(({ input, iti }) => {
+          input.value = iti.getNumber(); // +91XXXXXXXXXX
+        });
+      });
+    });
+  </script>
+
+  <script>
+    $(":input").focus(function () {
+      $(this).css("border", "1px solid #7c7c7c")
+        .removeClass("error-border");
+      $(this).next(".error").text("");
+    });
+
+    function showError(inputId, message) {
+      $("#" + inputId).addClass("error-border");
+      $("#" + inputId + "Error").text(message);
+    }
+
+    function validate() {
+
+      let name = $('#name').val().trim();
+      let phone = $('#phone').val().trim();
+      let email = $('#email').val().trim();
+
+      let phoneFilter = /^[1-9][0-9]{9}$/;
+      let emailFilter = /^([a-zA-Z0-9_\.\-])+@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+      if (name === '') {
+        showError('name', 'Name field is mandatory');
+        return false;
+      }
+
+      if (phone === '') {
+        showError('phone', 'Phone field is mandatory');
+        return false;
+      }
+
+      if (!phoneFilter.test(phone)) {
+        showError('phone', 'Please enter a valid mobile number');
+        return false;
+      }
+
+      if (email === '') {
+        showError('email', 'Email field is mandatory');
+        return false;
+      }
+
+      if (!emailFilter.test(email)) {
+        showError('email', 'Please enter a valid email ID');
+        return false;
+      }
+      document.activeElement
+        .closest("form")
+        .dataset.validated = "true";
+      return true;
+    }
+
+    function validatepopup() {
+
+      let name = $('#name1').val().trim();
+      let phone = $('#phone1').val().trim();
+      let email = $('#email1').val().trim();
+
+      let phoneFilter = /^[1-9][0-9]{9}$/;
+      let emailFilter = /^([a-zA-Z0-9_\.\-])+@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+      if (name === '') {
+        showError('name1', 'Name field is mandatory');
+        return false;
+      }
+
+      if (phone === '') {
+        showError('phone1', 'Phone field is mandatory');
+        return false;
+      }
+
+      if (!phoneFilter.test(phone)) {
+        showError('phone1', 'Please enter a valid mobile number');
+        return false;
+      }
+
+      if (email === '') {
+        showError('email1', 'Email field is mandatory');
+        return false;
+      }
+
+      if (!emailFilter.test(email)) {
+        showError('email1', 'Please enter a valid email ID');
+        return false;
+      }
+      document.activeElement
+        .closest("form")
+        .dataset.validated = "true";
+      return true;
+    }
+  </script>
+
+  <script>
+    const targetDate = new Date("2026-02-20T10:00:00").getTime();
+
+    // ➕ helper for 0-padding
+    function pad(num) {
+      return num < 10 ? "0" + num : num;
+    }
+
+    function updateCounter() {
+      const now = new Date().getTime();
+      let diff = targetDate - now;
+
+      if (diff < 0) diff = 0;
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      document.getElementById("days").textContent = days;
+      document.getElementById("hours").textContent = pad(hours);
+      document.getElementById("minutes").textContent = pad(minutes);
+      document.getElementById("seconds").textContent = pad(seconds);
+    }
+
+    updateCounter();
+    setInterval(updateCounter, 1000);
+  </script>
+
+  <script>
+    document.querySelectorAll(".pageUrl").forEach(input => {
+      input.value = window.location.href;
+    });
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbznpSoKRtDvkQgPdKHux2o9MSjmvklFDO65IJaYzpJkXclEs8kJpwLOBAVWzh4j7Act/exec";
+    document.querySelectorAll(".main-form").forEach((form) => {
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        // Get form field valuesf
+        const name = form.name.value.trim();
+        const phone = form.phone.value.trim();
+        const email = form.email.value.trim();
+
+        // ✅ ONLY check if validation already succeeded
+        if (form.dataset.validated !== "true") {
+          return; // validation not completed → stop
+        }
+        const formData = new FormData(form);
+
+        // 1️⃣ Send to Google Script
+        fetch(scriptURL, { method: "POST", body: formData })
+          .then((res) => console.log("✅ Sent to Google Script"))
+          .catch((err) => console.error("❌ Google Script Error:", err));
+
+        // 2️⃣ Send to PHP backend
+        fetch(form.action, { method: "POST", body: formData })
+          .then((res) => {
+            console.log("✅ Sent to PHP");
+            window.location.href = "thankyou.html"; // redirect after both succeed
+          })
+          .catch((err) => {
+            console.error("❌ PHP Error:", err);
+            alert("Something went wrong. Please try again!");
+          });
+      });
+    });
+  </script>
+  <script>
+    const API_URL = "https://script.google.com/macros/s/AKfycby1YqGH-K--uIYbBe_NUrjjvrne7yebGWF_d_Eqp-5-Yx_ehB1f_2JXeV0a9udAusJ1/exec";
+
+    async function fetchEntries() {
+      try {
+        const res = await fetch(API_URL);
+        const data = await res.json();
+
+        if (data.status === "success") {
+          document.getElementById("entryCount").textContent =
+            Number(data.count).toLocaleString();
+        }
+      } catch (e) {
+        console.error("API error", e);
+      }
+    }
+
+    // Load immediately
+    fetchEntries();
+
+    // Refresh every second
+    setInterval(fetchEntries, 1000);
+  </script>
+  <script>
+    const featureSwiper = new Swiper(".featuresSwiper", {
+      loop: true,
+      speed: 1000,                 // ⏩ higher = slower movement
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      allowTouchMove: true,
+      grabCursor: true,
+
+      autoplay: {
+        delay: 0,                  // 🔥 key for marquee
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true
+      },
+
+      freeMode: true,
+      freeModeMomentum: false,
+
+      breakpoints: {
+        0: { slidesPerView: 1.5 },
+        992: { slidesPerView: 4.5 }
+      }
+    });
+  </script>
+  <script>
+    $(function () {
+      var swiper = new Swiper(".gallerySwiper", {
+        loop: true,
+        speed: 800,
+        spaceBetween: 20,
+        grabCursor: true,
+
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+
+        navigation: {
+          nextEl: ".journey-next",
+          prevEl: ".journey-prev",
+        },
+
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 8,
+          },
+          480: {
+            slidesPerView: 2,
+            spaceBetween: 12,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 16,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+        },
+      });
+    });
+  </script>
+  <script>
+    const yearImage = document.getElementById("yearImage");
+    const dots = document.querySelectorAll(".timeline-dots span");
+
+    const journeySwiper = new Swiper(".journeySwiper", {
+      slidesPerView: 1,
+      speed: 800,
+      navigation: {
+        nextEl: ".journey-next",
+        prevEl: ".journey-prev"
+      },
+      on: {
+        slideChange: function () {
+          updateTimeline(this.activeIndex);
+        }
+      }
+    });
+
+    function updateTimeline(index) {
+      dots.forEach(d => d.classList.remove("active"));
+      dots[index].classList.add("active");
+
+      const activeSlide = journeySwiper.slides[index];
+      yearImage.src = activeSlide.dataset.img;
+    }
+
+    dots.forEach(dot => {
+      dot.addEventListener("click", () => {
+        journeySwiper.slideTo(dot.dataset.index);
+      });
+    });
+
+    updateTimeline(0);
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const wrapper = document.querySelector(".logo-marquee-wrapper");
+      const marquee = document.querySelector(".logo-marquee");
+
+      if (!wrapper || !marquee) {
+        console.error("Marquee elements not found");
+        return;
+      }
+
+      // 🔁 DUPLICATE CONTENT ONCE
+      marquee.innerHTML += marquee.innerHTML;
+
+      let speed = 2;        // 🚀 increase for faster scroll (1–3 ideal)
+      let paused = false;
+
+      wrapper.addEventListener("mouseenter", () => paused = true);
+      wrapper.addEventListener("mouseleave", () => paused = false);
+
+      function autoScroll() {
+        if (!paused) {
+          wrapper.scrollLeft += speed;
+
+          // ✅ RESET AT HALF (SEAMLESS LOOP)
+          if (wrapper.scrollLeft >= marquee.scrollWidth / 2) {
+            wrapper.scrollLeft = 0;
+          }
+        }
+        requestAnimationFrame(autoScroll);
+      }
+
+      autoScroll();
+    });
+  </script>
+  <!-- <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(function () {
+        const modal = new bootstrap.Modal(
+          document.getElementById("registerModal")
+        );
+        modal.show();
+      }, 10000); // 10 seconds
+    });
+  </script> -->
+  <script defer src="https://india.kenyt.ai/botapp/ChatbotUI/dist/js/bot-loader.js" type="text/javascript"
+    data-bot="25822720"></script>
+
+  <!-- <script src='https://stagingagldashboard.adv8.co/common/js/webform_self.js'>
+  </script>
+  <script>WEBFORM.init(['form', 1902]);
+    WEBFORM.loadForm();</script> -->
+</body>
+
+</html>

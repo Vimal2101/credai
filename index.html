@@ -22,6 +22,9 @@
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
@@ -35,7 +38,7 @@
 <body class="index-page">
 
   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+    <div class="container-fluid d-flex align-items-center">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
@@ -53,9 +56,8 @@
         <!-- <i class="mobile-nav-toggle d-xl-none bi bi-list"></i> -->
       </nav>
 
-      <a class="btn-getstarted auto-shine-btn" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Get Your
-        Free VIP
-        Pass</a>
+      <a class="btn-getstarted auto-shine-btn" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Get your
+        VIP Pass</a>
 
     </div>
   </header>
@@ -76,13 +78,14 @@
         <div class="hero-content">
 
           <div class="hero-actions">
-            <a href="#" class=""><i class="bi bi-calendar3"></i> Feb 20th,21th and 22th 2026</a>
-            <a href="#"><i class="bi bi-map"></i> Chennai Trade Center</a>
+            <a href="#" class="d-none d-md-block d-lg-block mb-3"><i class="bi bi-calendar3"></i> Feb 20th, 21th and
+              22th 2026</a>
+            <a href="#" class="d-none d-md-block d-lg-block"><i class="bi bi-geo-alt-fill"></i> Chennai Trade Center</a>
 
             <div class="reg mt-2">
               <h4 class="counter-number">
-                <span id="entryCount">0</span>
-                <small class="counter-text"> Registrations & Counting</small>
+                <span id="entryCount">0</span><br>
+                <small class="counter-text"> Registrations</small>
               </h4>
             </div>
 
@@ -110,9 +113,9 @@
                   <small>Seconds</small>
                 </div>
 
-                <p>Timer's Running<br>Hurry Up!</p>
-              </div>
 
+              </div>
+              <p class="time-grid-paragraph">Timer is Running<br>Hurry Up!</p>
             </div>
 
           </div>
@@ -134,7 +137,7 @@
               <small class="error" id="nameError"></small>
             </div>
             <div class="form-group">
-              <input type="tel" id="phone" name="phone" class="form-control form-text email-icon" placeholder="Mobile">
+              <input type="tel" id="phone" name="phone" class="form-control form-text email-icon" placeholder="Mobile" maxlength="10">
               <small class="error" id="phoneError"></small>
             </div>
             <div class="form-group">
@@ -154,15 +157,16 @@
                 <option value="Above 1Cr">Above 1Cr</option>
               </select>
             </div> -->
-            <!-- <div class="form-group">
-              <select name="property" id="date" class="form-control form-text email-icon">
+            <div class="form-group">
+              <select name="property" id="property" class="form-control form-text email-icon">
                 <option value="">Type Of Property</option>
                 <option value="Apartments">Apartments</option>
                 <option value="Villas">Villas</option>
                 <option value="Plots">Plots</option>
                 <option value="Commercial Spaces">Commercial Spaces</option>
               </select>
-            </div> -->
+              <small class="error" id="propertyError"></small>
+            </div>
             <input type="hidden" name="url" class="pageUrl">
             <!-- <div class="form-group">
               <select name="visit" id="date" class="form-control form-text email-icon" required="">
@@ -175,7 +179,7 @@
 
 
             <div class="form-btn text-center">
-              <input class="" type="submit" value="Register" id="submitbtn">
+              <input class="" type="submit" value="Submit" id="submitbtn">
             </div>
 
           </form>
@@ -244,7 +248,7 @@
                   <div class="swiper-slide">
                     <div class="feature-box">
                       <div class="feature-icon">
-                        <img src="assets/img/credai/about-icon/urban.png">
+                        <img src="assets/img/credai/about-icon/urban.png" loading="lazy" decoding="async" alt="">
                       </div>
                       <p>80+<br><span> Developers </span></p>
                     </div>
@@ -254,7 +258,7 @@
                   <div class="swiper-slide">
                     <div class="feature-box">
                       <div class="feature-icon">
-                        <img src="assets/img/credai/about-icon/unit.png">
+                        <img src="assets/img/credai/about-icon/unit.png" loading="lazy" decoding="async" alt="">
                       </div>
                       <p>35,000+ <br><span> Dwelling Units</span></p>
                     </div>
@@ -264,7 +268,7 @@
                   <div class="swiper-slide">
                     <div class="feature-box">
                       <div class="feature-icon">
-                        <img src="assets/img/credai/about-icon/shield.png">
+                        <img src="assets/img/credai/about-icon/shield.png" loading="lazy" decoding="async" alt="">
                       </div>
                       <p><span>Credibility</span></p>
                     </div>
@@ -274,7 +278,7 @@
                   <div class="swiper-slide">
                     <div class="feature-box">
                       <div class="feature-icon">
-                        <img src="assets/img/credai/about-icon/up.png">
+                        <img src="assets/img/credai/about-icon/up.png" loading="lazy" decoding="async" alt="">
                       </div>
                       <p><span>Market Upswing</span></p>
                     </div>
@@ -284,7 +288,7 @@
                   <div class="swiper-slide">
                     <div class="feature-box">
                       <div class="feature-icon">
-                        <img src="assets/img/credai/about-icon/quality.png">
+                        <img src="assets/img/credai/about-icon/quality.png" loading="lazy" decoding="async" alt="">
                       </div>
                       <p><span> All RERA approved Projects </span></p>
                     </div>
@@ -304,7 +308,7 @@
                   <div class="swiper-slide">
                     <div class="feature-box">
                       <div class="feature-icon">
-                        <img src="assets/img/credai/about-icon/group.png">
+                        <img src="assets/img/credai/about-icon/group.png" loading="lazy" decoding="async" alt="">
                       </div>
                       <p>45,000+ <br><span> Walk-Ins </span></p>
                     </div>
@@ -328,7 +332,7 @@
           <div class="col-lg-4 aos-init aos-animate d-none d-lg-block d-sm-none" data-aos="fade-left">
             <div class="image-wrapper position-relative">
 
-              <img src="assets/img/credai/edit.png" alt="Security Solutions" class="img-fluid">
+              <img src="assets/img/credai/journy.jpg" alt="Security Solutions" class="img-fluid">
             </div>
           </div>
 
@@ -424,8 +428,8 @@
 
               <!-- Controls -->
               <div class="journey-controls">
-                <button class="journey-prev">‹</button>
-                <button class="journey-next">›</button>
+                <button class="journey-prev"><i class="fa-solid fa-circle-chevron-left"></i></button>
+                <button class="journey-next"><i class="fa-solid fa-circle-chevron-right"></i></button>
               </div>
             </div>
           </div>
@@ -440,184 +444,159 @@
       <section id="services" class="services section">
         <div class="intro-content text-center">
           <h2 class="section-heading mb-4">Event Highlights</h2>
-          <p class="section-description">Explore our last year's CREDAI FAIRPRO festive highlights that reflect the happy customers, remarkable
-              success stories, and unforgettable moments.</p>
+          <p class="section-description">Explore our last year's CREDAI FAIRPRO festive highlights that reflect the
+            happy customers, remarkable
+            success stories, and unforgettable moments.</p>
         </div>
-         
-            <!--Carousel Gallery-->
-            <div class="carousel-gallery">
-              <div class="swiper-container">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <a href="assets/img/credai/gallery/1.webp"
-                      data-fancybox="gallery">
-                      <div class="image"
-                        style="background-image: url(assets/img/credai/gallery/1.webp)">
-                        <div class="overlay">
-                          <em class="mdi mdi-magnify-plus"></em>
-                        </div>
-                      </div>
-                    </a>
+
+        <!--Carousel Gallery-->
+        <div class="carousel-gallery">
+          <div class="swiper gallerySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="assets/img/credai/gallery/1.webp" data-fancybox="gallery">
+                  <div class="image" style="background-image: url(assets/img/credai/gallery/1.webp)">
+                    <div class="overlay">
+                      <em class="mdi mdi-magnify-plus"></em>
+                    </div>
                   </div>
-                  <div class="swiper-slide">
-                    <a href="assets/img/credai/gallery/2.webp"
-                      data-fancybox="gallery">
-                      <div class="image"
-                        style="background-image: url(assets/img/credai/gallery/2.webp)">
-                        <div class="overlay">
-                          <em class="mdi mdi-magnify-plus"></em>
-                        </div>
-                      </div>
-                    </a>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="assets/img/credai/gallery/2.webp" data-fancybox="gallery">
+                  <div class="image" style="background-image: url(assets/img/credai/gallery/2.webp)">
+                    <div class="overlay">
+                      <em class="mdi mdi-magnify-plus"></em>
+                    </div>
                   </div>
-                  <div class="swiper-slide">
-                    <a href="assets/img/credai/gallery/3.webp"
-                      data-fancybox="gallery">
-                      <div class="image"
-                        style="background-image: url(assets/img/credai/gallery/3.webp)">
-                        <div class="overlay">
-                          <em class="mdi mdi-magnify-plus"></em>
-                        </div>
-                      </div>
-                    </a>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="assets/img/credai/gallery/3.webp" data-fancybox="gallery">
+                  <div class="image" style="background-image: url(assets/img/credai/gallery/3.webp)">
+                    <div class="overlay">
+                      <em class="mdi mdi-magnify-plus"></em>
+                    </div>
                   </div>
-                  <div class="swiper-slide">
-                    <a href="assets/img/credai/gallery/4.webp"
-                      data-fancybox="gallery">
-                      <div class="image"
-                        style="background-image: url(assets/img/credai/gallery/4.webp)">
-                        <div class="overlay">
-                          <em class="mdi mdi-magnify-plus"></em>
-                        </div>
-                      </div>
-                    </a>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="assets/img/credai/gallery/4.webp" data-fancybox="gallery">
+                  <div class="image" style="background-image: url(assets/img/credai/gallery/4.webp)">
+                    <div class="overlay">
+                      <em class="mdi mdi-magnify-plus"></em>
+                    </div>
                   </div>
-                  <div class="swiper-slide">
-                    <a href="assets/img/credai/gallery/5.webp"
-                      data-fancybox="gallery">
-                      <div class="image"
-                        style="background-image: url(assets/img/credai/gallery/5.webp)">
-                        <div class="overlay">
-                          <em class="mdi mdi-magnify-plus"></em>
-                        </div>
-                      </div>
-                    </a>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="assets/img/credai/gallery/5.webp" data-fancybox="gallery">
+                  <div class="image" style="background-image: url(assets/img/credai/gallery/5.webp)">
+                    <div class="overlay">
+                      <em class="mdi mdi-magnify-plus"></em>
+                    </div>
                   </div>
-                  <div class="swiper-slide">
-                    <a href="assets/img/credai/gallery/6.webp"
-                      data-fancybox="gallery">
-                      <div class="image"
-                        style="background-image: url(assets/img/credai/gallery/6.webp)">
-                        <div class="overlay">
-                          <em class="mdi mdi-magnify-plus"></em>
-                        </div>
-                      </div>
-                    </a>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="assets/img/credai/gallery/6.webp" data-fancybox="gallery">
+                  <div class="image" style="background-image: url(assets/img/credai/gallery/6.webp)">
+                    <div class="overlay">
+                      <em class="mdi mdi-magnify-plus"></em>
+                    </div>
                   </div>
-                   <div class="swiper-slide">
-                    <a href="assets/img/credai/gallery/7.webp"
-                      data-fancybox="gallery">
-                      <div class="image"
-                        style="background-image: url(assets/img/credai/gallery/7.webp)">
-                        <div class="overlay">
-                          <em class="mdi mdi-magnify-plus"></em>
-                        </div>
-                      </div>
-                    </a>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="assets/img/credai/gallery/7.webp" data-fancybox="gallery">
+                  <div class="image" style="background-image: url(assets/img/credai/gallery/7.webp)">
+                    <div class="overlay">
+                      <em class="mdi mdi-magnify-plus"></em>
+                    </div>
                   </div>
-                  <div class="swiper-slide">
-                    <a href="assets/img/credai/gallery/8.webp"
-                      data-fancybox="gallery">
-                      <div class="image"
-                        style="background-image: url(assets/img/credai/gallery/8.webp)">
-                        <div class="overlay">
-                          <em class="mdi mdi-magnify-plus"></em>
-                        </div>
-                      </div>
-                    </a>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="assets/img/credai/gallery/8.webp" data-fancybox="gallery">
+                  <div class="image" style="background-image: url(assets/img/credai/gallery/8.webp)">
+                    <div class="overlay">
+                      <em class="mdi mdi-magnify-plus"></em>
+                    </div>
                   </div>
-                  <div class="swiper-slide">
-                    <a href="assets/img/credai/gallery/9.webp"
-                      data-fancybox="gallery">
-                      <div class="image"
-                        style="background-image: url(assets/img/credai/gallery/9.webp)">
-                        <div class="overlay">
-                          <em class="mdi mdi-magnify-plus"></em>
-                        </div>
-                      </div>
-                    </a>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="assets/img/credai/gallery/9.webp" data-fancybox="gallery">
+                  <div class="image" style="background-image: url(assets/img/credai/gallery/9.webp)">
+                    <div class="overlay">
+                      <em class="mdi mdi-magnify-plus"></em>
+                    </div>
                   </div>
-                  <div class="swiper-slide">
-                    <a href="assets/img/credai/gallery/10.webp"
-                      data-fancybox="gallery">
-                      <div class="image"
-                        style="background-image: url(assets/img/credai/gallery/10.webp)">
-                        <div class="overlay">
-                          <em class="mdi mdi-magnify-plus"></em>
-                        </div>
-                      </div>
-                    </a>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="assets/img/credai/gallery/10.webp" data-fancybox="gallery">
+                  <div class="image" style="background-image: url(assets/img/credai/gallery/10.webp)">
+                    <div class="overlay">
+                      <em class="mdi mdi-magnify-plus"></em>
+                    </div>
                   </div>
-                  <div class="swiper-slide">
-                    <a href="assets/img/credai/gallery/11.webp"
-                      data-fancybox="gallery">
-                      <div class="image"
-                        style="background-image: url(assets/img/credai/gallery/11.webp)">
-                        <div class="overlay">
-                          <em class="mdi mdi-magnify-plus"></em>
-                        </div>
-                      </div>
-                    </a>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="assets/img/credai/gallery/11.webp" data-fancybox="gallery">
+                  <div class="image" style="background-image: url(assets/img/credai/gallery/11.webp)">
+                    <div class="overlay">
+                      <em class="mdi mdi-magnify-plus"></em>
+                    </div>
                   </div>
-                  <div class="swiper-slide">
-                    <a href="assets/img/credai/gallery/12.webp"
-                      data-fancybox="gallery">
-                      <div class="image"
-                        style="background-image: url(assets/img/credai/gallery/12.webp)">
-                        <div class="overlay">
-                          <em class="mdi mdi-magnify-plus"></em>
-                        </div>
-                      </div>
-                    </a>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="assets/img/credai/gallery/12.webp" data-fancybox="gallery">
+                  <div class="image" style="background-image: url(assets/img/credai/gallery/12.webp)">
+                    <div class="overlay">
+                      <em class="mdi mdi-magnify-plus"></em>
+                    </div>
                   </div>
-                  <div class="swiper-slide">
-                    <a href="assets/img/credai/gallery/13.webp"
-                      data-fancybox="gallery">
-                      <div class="image"
-                        style="background-image: url(assets/img/credai/gallery/13.webp)">
-                        <div class="overlay">
-                          <em class="mdi mdi-magnify-plus"></em>
-                        </div>
-                      </div>
-                    </a>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="assets/img/credai/gallery/13.webp" data-fancybox="gallery">
+                  <div class="image" style="background-image: url(assets/img/credai/gallery/13.webp)">
+                    <div class="overlay">
+                      <em class="mdi mdi-magnify-plus"></em>
+                    </div>
                   </div>
-                  <div class="swiper-slide">
-                    <a href="assets/img/credai/gallery/14.webp"
-                      data-fancybox="gallery">
-                      <div class="image"
-                        style="background-image: url(assets/img/credai/gallery/14.webp)">
-                        <div class="overlay">
-                          <em class="mdi mdi-magnify-plus"></em>
-                        </div>
-                      </div>
-                    </a>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="assets/img/credai/gallery/14.webp" data-fancybox="gallery">
+                  <div class="image" style="background-image: url(assets/img/credai/gallery/14.webp)">
+                    <div class="overlay">
+                      <em class="mdi mdi-magnify-plus"></em>
+                    </div>
                   </div>
-                  <div class="swiper-slide">
-                    <a href="assets/img/credai/gallery/15.webp"
-                      data-fancybox="gallery">
-                      <div class="image"
-                        style="background-image: url(assets/img/credai/gallery/15.webp)">
-                        <div class="overlay">
-                          <em class="mdi mdi-magnify-plus"></em>
-                        </div>
-                      </div>
-                    </a>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="assets/img/credai/gallery/15.webp" data-fancybox="gallery">
+                  <div class="image" style="background-image: url(assets/img/credai/gallery/15.webp)">
+                    <div class="overlay">
+                      <em class="mdi mdi-magnify-plus"></em>
+                    </div>
                   </div>
-                </div>
-                <div class="swiper-pagination"></div>
+                </a>
               </div>
             </div>
-            <!--#Carousel Gallery-->
+            <!-- Controls -->
+            <div class="journey-controls text-center">
+              <button class="journey-prev"><i class="fa-solid fa-circle-chevron-left"></i></button>
+              <button class="journey-next"><i class="fa-solid fa-circle-chevron-right"></i></button>
+            </div>
+          </div>
+        </div>
+        <!--#Carousel Gallery-->
 
       </section>
     </div>
@@ -945,28 +924,28 @@
     <!-- QR Section -->
     <section class="free-entry-section" id="freeentry" data-aos="fade-up">
       <div class="container">
-        <div class="row align-items-center">
-
-          <!-- LEFT : QR / MOBILE IMAGE -->
-          <div class="col-lg-4 col-md-6">
-            <!-- <div class="qr-wrapper ">
-                        <img src="assets/img/QR-scan.png" alt="Scan QR Code" class="img-fluid free-entry-phone">
-
-                    </div> -->
-
-          </div>
+        <div class="row justify-content-center align-items-center">
 
           <!-- RIGHT : CONTENT -->
-          <div class="col-lg-8 col-md-6">
-            <div class="qr-code d-block d-lg-none mb-4">
+          <div class="col-lg-5 col-12">
+            <!-- <div class="qr-code mb-4">
               <img src="assets/img/credai/register link qr.png" width="50%" alt="QR Code" class="img-fluid">
-            </div>
+            </div> -->
             <div class="free-entry-content">
-              <h2>Get free entry tickets</h2>
+              <h2>Get Your VIP Pass Now</h2>
               <p>
-                Scan this QR code and get access to free entry tickets for
+                Get access to entry tickets for
                 the biggest property expo in Chennai!
               </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-12">
+            <!-- <div class="qr-code mb-4">
+              <img src="assets/img/credai/register link qr.png" width="50%" alt="QR Code" class="img-fluid">
+            </div> -->
+            <div class="free-entry-content">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" class="register-btn">Register Now</a>
             </div>
           </div>
 
@@ -976,12 +955,12 @@
 
 
   </main>
-<div class="container-fluid p-0">
-   <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15549.31040514513!2d80.190933!3d13.014798!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267345ceaf5c7%3A0x96249ade3e76037c!2sChennai%20Trade%20Centre%2C%20CHENNAI%20TRADE%20CENTRE%2C%20Ramapuram%2C%20Nandambakkam%2C%20Chennai%2C%20Tamil%20Nadu%20600089!5e0!3m2!1sen!2sin!4v1767610453219!5m2!1sen!2sin"
-              width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
+  <div class="container-fluid p-0">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15549.31040514513!2d80.190933!3d13.014798!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267345ceaf5c7%3A0x96249ade3e76037c!2sChennai%20Trade%20Centre%2C%20CHENNAI%20TRADE%20CENTRE%2C%20Ramapuram%2C%20Nandambakkam%2C%20Chennai%2C%20Tamil%20Nadu%20600089!5e0!3m2!1sen!2sin!4v1767610453219!5m2!1sen!2sin"
+      width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
   <footer class="custom-footer" data-aos="fade-up">
     <div class="container-fluid">
       <!-- COPYRIGHT (GLOBAL – LAST ALWAYS) -->
@@ -992,8 +971,8 @@
   </footer>
 
   <div class="bottom_button d-lg-none d-md-none d-sm-block d-block">
-    <div class="formButton"><a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" class="blink"><i
-          class="fa fa-phone"></i> Get Your Free VIP Pass</a></div>
+    <div class="formButton"><a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" class="blink"> Get your
+        VIP Pass</a></div>
     <!-- <div class="contactButtom"><a href="#mainform" onclick="myFunction()" class="blink_mes"><i
                         class="fa fa-list"></i>
                     Enquire Now</a></div> -->
@@ -1021,13 +1000,23 @@
               <small class="error" id="name1Error"></small>
             </div>
             <div class="form-group">
-              <input type="tel" id="phone1" name="phone" class="form-control form-text email-icon" placeholder="Mobile">
+              <input type="tel" id="phone1" name="phone" class="form-control form-text email-icon" placeholder="Mobile" maxlength="10">
               <small class="error" id="phone1Error"></small>
             </div>
             <div class="form-group">
               <input type="email" id="email1" name="email" class="form-control form-text email-icon"
                 placeholder="Email">
               <small class="error" id="email1Error"></small>
+            </div>
+            <div class="form-group">
+              <select name="property" id="property1" class="form-control form-text email-icon">
+                <option value="">Type Of Property</option>
+                <option value="Apartments">Apartments</option>
+                <option value="Villas">Villas</option>
+                <option value="Plots">Plots</option>
+                <option value="Commercial Spaces">Commercial Spaces</option>
+              </select>
+              <small class="error" id="property1Error"></small>
             </div>
             <input type="hidden" name="url" class="pageUrl">
 
@@ -1096,7 +1085,7 @@
   </script>
 
   <script>
-    $(":input").focus(function () {
+    $("input, select, textarea").focus(function () {
       $(this).css("border", "1px solid #7c7c7c")
         .removeClass("error-border");
       $(this).next(".error").text("");
@@ -1112,6 +1101,7 @@
       let name = $('#name').val().trim();
       let phone = $('#phone').val().trim();
       let email = $('#email').val().trim();
+      let property = $('#property').val().trim(); // ✅ NEW
 
       let phoneFilter = /^[1-9][0-9]{9}$/;
       let emailFilter = /^([a-zA-Z0-9_\.\-])+@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
@@ -1126,10 +1116,10 @@
         return false;
       }
 
-      if (!phoneFilter.test(phone)) {
-        showError('phone', 'Please enter a valid mobile number');
-        return false;
-      }
+      // if (!phoneFilter.test(phone)) {
+      //   showError('phone', 'Please enter a valid mobile number');
+      //   return false;
+      // }
 
       if (email === '') {
         showError('email', 'Email field is mandatory');
@@ -1140,6 +1130,13 @@
         showError('email', 'Please enter a valid email ID');
         return false;
       }
+
+      // ✅ Property validation
+      if (property === '') {
+        showError('property', 'Please select type of property');
+        return false;
+      }
+
       document.activeElement
         .closest("form")
         .dataset.validated = "true";
@@ -1151,6 +1148,7 @@
       let name = $('#name1').val().trim();
       let phone = $('#phone1').val().trim();
       let email = $('#email1').val().trim();
+      let property = $('#property1').val().trim(); // ✅ FIXED
 
       let phoneFilter = /^[1-9][0-9]{9}$/;
       let emailFilter = /^([a-zA-Z0-9_\.\-])+@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
@@ -1165,10 +1163,10 @@
         return false;
       }
 
-      if (!phoneFilter.test(phone)) {
-        showError('phone1', 'Please enter a valid mobile number');
-        return false;
-      }
+      // if (!phoneFilter.test(phone)) {
+      //   showError('phone1', 'Please enter a valid mobile number');
+      //   return false;
+      // }
 
       if (email === '') {
         showError('email1', 'Email field is mandatory');
@@ -1179,6 +1177,13 @@
         showError('email1', 'Please enter a valid email ID');
         return false;
       }
+
+      // ✅ Property validation
+      if (property === '') {
+        showError('property1', 'Please select type of property');
+        return false;
+      }
+
       document.activeElement
         .closest("form")
         .dataset.validated = "true";
@@ -1220,7 +1225,7 @@
       input.value = window.location.href;
     });
     const scriptURL =
-      "https://script.google.com/macros/s/AKfycbxRXUwhwZNhcz7FSdyaqvcdIcR_20FYfkpLB4UFWjwCAzHWyId_24rvHVjjd3XsQgam/exec";
+      "https://script.google.com/macros/s/AKfycbznpSoKRtDvkQgPdKHux2o9MSjmvklFDO65IJaYzpJkXclEs8kJpwLOBAVWzh4j7Act/exec";
     document.querySelectorAll(".main-form").forEach((form) => {
 
       form.addEventListener("submit", (e) => {
@@ -1304,44 +1309,41 @@
   </script>
   <script>
     $(function () {
-
-      var swiper = new Swiper('.carousel-gallery .swiper-container', {
-        effect: 'slide',
+      var swiper = new Swiper(".gallerySwiper", {
         loop: true,
-        speed: 900,
-        slidesPerView: 5,
+        speed: 800,
         spaceBetween: 20,
-        simulateTouch: true,
+        grabCursor: true,
+
         autoplay: {
-          delay: 5000,
-          stopOnLastSlide: false,
-          disableOnInteraction: false
+          delay: 4000,
+          disableOnInteraction: false,
         },
-        pagination: {
-          el: '.carousel-gallery .swiper-pagination',
-          clickable: true
+
+        navigation: {
+          nextEl: ".journey-next",
+          prevEl: ".journey-prev",
         },
+
         breakpoints: {
-          // when window width is <= 320px
           320: {
             slidesPerView: 1,
-            spaceBetween: 5
+            spaceBetween: 8,
           },
-          // when window width is <= 480px
-          425: {
+          480: {
             slidesPerView: 2,
-            spaceBetween: 10
+            spaceBetween: 12,
           },
-          // when window width is <= 640px
           768: {
+            slidesPerView: 3,
+            spaceBetween: 16,
+          },
+          1024: {
             slidesPerView: 4,
-            spaceBetween: 20
-          }
-        }
-      }); 
-
-
-
+            spaceBetween: 20,
+          },
+        },
+      });
     });
   </script>
   <script>
@@ -1424,6 +1426,8 @@
       }, 10000); // 10 seconds
     });
   </script>
+  <script defer src="https://india.kenyt.ai/botapp/ChatbotUI/dist/js/bot-loader.js" type="text/javascript"
+    data-bot="25822720"></script>
   <script src='https://stagingagldashboard.adv8.co/common/js/webform_self.js'>
   </script>
   <script>WEBFORM.init(['form', 1902]);

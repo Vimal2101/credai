@@ -227,21 +227,6 @@ h6 {
   }
 }
 
-@media (max-width: 1200px) {
-  .header .logo {
-    order: 1;
-  }
-
-  .header .btn-getstarted {
-    order: 2;
-    /* margin: 0 15px 0 0; */
-    padding: 6px 20px;
-  }
-
-  .header .navmenu {
-    order: 3;
-  }
-}
 
 .scrolled .header {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
@@ -506,7 +491,7 @@ h6 {
 
 
 .free-entry-section {
-  background: url("../img/credai/qr-bg-1.png");
+  background: url("../img/credai/qr-bg-1-new.png");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -756,6 +741,7 @@ h6 {
   height: 44px;
   border-radius: 5px;
   transition: all 0.4s;
+  border: 2px solid #fff;
 }
 
 .scroll-top i {
@@ -772,7 +758,7 @@ h6 {
 .scroll-top.active {
   visibility: visible;
   opacity: 1;
-  bottom: 15px;
+  bottom: 30px;
 }
 
 /*--------------------------------------------------------------
@@ -917,7 +903,7 @@ section,
 
 .hero .hero-content {
   position: absolute;
-  top: 55%;
+  top: 20%;
   left: 5%;
   /* padding: 15px 0 15px 0; */
 }
@@ -927,6 +913,9 @@ section,
   border-radius: 12px;
   box-shadow: 0 8px 32px color-mix(in srgb, var(--default-color), transparent 85%);
   padding: 40px;
+}
+.hero .hero-content .hero-actions {
+  background: none ;
 }
 
 @media (max-width: 768px) {
@@ -965,33 +954,45 @@ section,
   }
 }
 
-.hero .hero-content .hero-actions {
+
+
+@media (max-width: 576px) {
+  .hero .hero-content .hero-actions {
   display: flex;
   align-items: center;
   /* gap: 32px; */
   /* margin-bottom: 64px; */
   display: grid;
+  background: #a10f2f9e;
+  padding: 10px;
+  border-radius: 15px;
 }
-
-@media (max-width: 576px) {
   .hero .hero-content .hero-actions {
     flex-direction: column;
     gap: 10px;
     margin-bottom: 48px;
   }
+  .hero .hero-content .hero-actions .reg h4 span {
+  color: #fff !important;
+  }
+  .hero .hero-content .hero-actions .reg h4 small {
+  color: #fff !important;
+  }
+  .time-box small {
+  color: #fff !important;
+  }
 }
 
 .hero .hero-content .hero-actions a {
-  color: #FFF;
+  color: #0b0600;
   font-family: Inter;
-  font-size: 20px;
+  font-size: 22px;
   font-style: normal;
-  font-weight: 400;
-  line-height: 147%;
+  font-weight: 600;
 }
 
 .hero .hero-content .hero-actions .reg h4 span {
-  color: #FB0;
+  color: #0b0600;
   font-family: Inter;
   font-size: 26px;
   font-style: normal;
@@ -1000,26 +1001,28 @@ section,
 }
 
 .hero .hero-content .hero-actions .reg h4 small {
-  color: #FB0;
+  color: #0b0600;
   font-family: Inter;
   font-size: 18px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   line-height: normal;
 }
 
 .time-grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 0fr);
   gap: 15px;
 }
 
-.time-grid p {
-  color: #FFF;
+.time-grid-paragraph {
+  color: #0b0600;
   font-family: Inter;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
 }
+
 
 .time-box {
   display: flex;
@@ -1057,7 +1060,7 @@ section,
 
 .time-box small {
   margin-top: 6px;
-  color: #FFF;
+  color: #0b0600;
   text-align: right;
   font-family: Inter;
   font-size: 12px;
@@ -1112,6 +1115,14 @@ section,
 }
 
 @media (max-width: 768px) {
+  .time-item span {
+    font-size: 20px;
+  }
+  .time-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 0fr);
+  gap: 5px;
+  }
   .hero .hero-content .hero-stats {
     gap: 32px;
   }
@@ -2597,6 +2608,13 @@ section,
 /*# Carousel Gallery*/
 
 @media (max-width: 768px) {
+  .call-to-action .content-area ul li{
+  list-style: none;
+  text-align: center;
+  }
+  .journey-controls{
+    justify-self: center;
+  }
   .services {
     padding: 60px 0;
   }
@@ -2685,7 +2703,7 @@ section,
 /* Heading outside card (right column) */
 .partner-heading.outside {
   text-align: center;
-  font-weight: 400;
+  font-weight: 600;
   color: #005B31;
   margin-bottom: 20px;
   /* padding-left: 40px; */
@@ -2732,7 +2750,7 @@ section,
 .formDiv {
   position: absolute;
   /* bottom: 12%; */
-  top: 25%;
+  top: 15%;
   right: 5%;
   /*  background: linear-gradient(to top, #dbbf74 0%, #ffe7ac 100%);*/
   padding: 28px;
@@ -2750,7 +2768,7 @@ section,
   font-size: 22px;
   font-style: normal;
   font-weight: 700;
-  line-height: 102%;
+  line-height: 32px;
   /* 26.52px */
   text-transform: uppercase;
   background: linear-gradient(97deg, #FB0 1.55%, #FFF 53.6%, #FB0 108.74%);
@@ -2765,15 +2783,15 @@ section,
 }
 
 .main-form .form-btn input {
-  background: #fff;
+  background: #ea9d23;
   border: none;
   padding: 10px 15px;
   width: 100%;
-  color: #A10F2F;
+  color: #000;
   font-family: Inter;
-  font-size: 15px;
+  font-size: 22px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   line-height: normal;
   border-radius: 5px;
 }
@@ -2781,16 +2799,19 @@ section,
 .formDiv .form-control {
   padding: 12px;
   margin-bottom: 10px;
-  height: 40px;
+  height: 50px;
   color: #000;
   font-family: Inter;
-  font-size: 12px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.80);
 }
-
+.form-control{
+  height: 50px;
+    font-size: 16px;
+}
 .error {
   color: #fff;
   font-size: 12px;
@@ -2828,7 +2849,7 @@ input.error-border {
   .free-entry-section {
     text-align: center;
     background-position: center;
-    height: 480px;
+    /* height: 480px; */
   }
 
   .free-entry-content {
@@ -2843,8 +2864,8 @@ input.error-border {
     height: 100%;
     max-height: none;
     /* overflow-y: auto; */
-    padding-right: 0px;
-    padding-bottom: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .partner-heading,
@@ -2876,12 +2897,17 @@ input.error-border {
 
   .call-to-action .content-area h2,
   .features .tabs-wrapper .section-header h2 {
+    text-align: center;
     font-size: 35px;
   }
 
   .call-to-action .content-area h3,
   .features .tabs-wrapper .section-header h3 {
+    text-align: center;
     font-size: 24px;
+  }
+  .call-to-action .content-area h4{
+    text-align: center;
   }
 
   .call-to-action {
@@ -2889,18 +2915,18 @@ input.error-border {
   }
 
   .about .section-header h2 {
-    text-align: left;
+    text-align: center;
     font-size: 35px;
   }
 
   .about .section-header h3 {
-    text-align: left;
+    text-align: center;
     font-size: 24px;
   }
 
   .about .description-text {
     width: 100%;
-    text-align: justify;
+    text-align: center;
   }
 
   section,
@@ -2916,7 +2942,14 @@ input.error-border {
   }
 
   .hero .hero-content {
-    top: 26%;
+    top: 28%;
+  }
+  .time-grid-paragraph{
+    font-size: 16px;
+    margin-top: 5px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
   }
 
   .hero {
@@ -2972,16 +3005,17 @@ input.error-border {
 
   .formButton a {
     width: auto;
-    font-size: 16px;
+    font-size: 18px;
     text-decoration: none;
     font-family: "Adobe Devanagari";
     font-style: normal;
     font-weight: 700;
     text-transform: uppercase;
-    background: linear-gradient(97deg, #FB0 1.55%, #FFF 53.6%, #FB0 108.74%);
+    color: #fff;
+    /* background: linear-gradient(97deg, #FB0 1.55%, #FFF 53.6%, #FB0 108.74%);
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
   }
 
   .blink {
@@ -3075,8 +3109,50 @@ input.error-border {
 
 .partners-section{
   background-color: #ffebb1;
+  border-radius: 20px;
+}
+/*chatbot left align css*/
+
+#kenytChatBubble.style1{
+
+	left: 0 !important;
+	margin-left: 20px !important;
+
 }
 
+#kenytChatBubble.style1 .chatWithUsMessageWrapper {
+
+right: -180px !important;
+
+}
+
+#chatbox-container.position-right{
+
+left: 0 !important;	
+
+}
+
+#chatbox-container.style1.position-right {
+  
+  margin-left: 70px !important;
+
+}  
+.hero-img{
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.register-btn{
+      background: #ea9d23;
+    border: none;
+    padding: 10px 15px;
+    width: 100%;
+    color: #000;
+    font-family: Inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 5px;
+}
 /* Hide on small screens if needed */
 @media (max-width: 768px) {
   .floating-social {

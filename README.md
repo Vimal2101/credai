@@ -1,2 +1,0 @@
-# credai
-landing page
