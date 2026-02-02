@@ -491,7 +491,7 @@ h6 {
 
 
 .free-entry-section {
-  background: url("../img/credai/qr-bg-1-new.png");
+  background: url("../img/credai/qr-bg-1-new.webp");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -914,8 +914,9 @@ section,
   box-shadow: 0 8px 32px color-mix(in srgb, var(--default-color), transparent 85%);
   padding: 40px;
 }
+
 .hero .hero-content .hero-actions {
-  background: none ;
+  background: none;
 }
 
 @media (max-width: 768px) {
@@ -958,28 +959,32 @@ section,
 
 @media (max-width: 576px) {
   .hero .hero-content .hero-actions {
-  display: flex;
-  align-items: center;
-  /* gap: 32px; */
-  /* margin-bottom: 64px; */
-  display: grid;
-  background: #a10f2f9e;
-  padding: 10px;
-  border-radius: 15px;
-}
+    display: flex;
+    align-items: center;
+    /* gap: 32px; */
+    /* margin-bottom: 64px; */
+    display: grid;
+    background: #a10f2f9e;
+    padding: 10px;
+    border-radius: 15px;
+  }
+
   .hero .hero-content .hero-actions {
     flex-direction: column;
     gap: 10px;
     margin-bottom: 48px;
   }
+
   .hero .hero-content .hero-actions .reg h4 span {
-  color: #fff !important;
+    color: #fff !important;
   }
+
   .hero .hero-content .hero-actions .reg h4 small {
-  color: #fff !important;
+    color: #fff !important;
   }
+
   .time-box small {
-  color: #fff !important;
+    color: #fff !important;
   }
 }
 
@@ -1118,11 +1123,13 @@ section,
   .time-item span {
     font-size: 20px;
   }
+
   .time-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 0fr);
-  gap: 5px;
+    display: grid;
+    grid-template-columns: repeat(2, 0fr);
+    gap: 5px;
   }
+
   .hero .hero-content .hero-stats {
     gap: 32px;
   }
@@ -1516,8 +1523,8 @@ section,
   border-top: 1px solid #005B31;
   border-bottom: 1px solid #A10F2F;
   /* background-color: #005B31; */
-      background: url(../img/credai/Journey-bg.png);
-      background-position: bottom center;
+  background: url(../img/credai/Journey-bg.webp);
+  background-position: bottom center;
   border-radius: 20px;
   padding: 40px 10px 80px;
   box-shadow: 0 4px 51.9px 0 rgba(0, 0, 0, 0.13);
@@ -1539,9 +1546,9 @@ section,
 
 .features .tabs-wrapper .section-header h3 {
   background: linear-gradient(97deg, #FB0 1.55%, #FFF 53.6%, #FB0 108.74%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   color: #005B31;
   text-align: center;
   font-family: "Adobe Devanagari";
@@ -2040,7 +2047,7 @@ section,
 --------------------------------------------------------------*/
 .call-to-action {
   /* background: linear-gradient(135deg, color-mix(in srgb, var(--surface-color), var(--accent-color) 3%) 0%, var(--surface-color) 100%); */
-  background: url(../img/credai/Journey-bg.png);
+  background: url(../img/credai/Journey-bg.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;
@@ -2370,7 +2377,7 @@ section,
 .services {
   margin-top: 50px;
   padding: 50px 0;
-  background-image: url('../img/credai/event-bg.png');
+  background-image: url('../img/credai/event-bg.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;
@@ -2608,13 +2615,15 @@ section,
 /*# Carousel Gallery*/
 
 @media (max-width: 768px) {
-  .call-to-action .content-area ul li{
-  list-style: none;
-  text-align: center;
+  .call-to-action .content-area ul li {
+    list-style: none;
+    text-align: center;
   }
-  .journey-controls{
+
+  .journey-controls {
     justify-self: center;
   }
+
   .services {
     padding: 60px 0;
   }
@@ -2729,7 +2738,7 @@ section,
   max-height: 100%;
   /* adjust as needed */
   /* overflow-y: auto; */
-   padding-left: 10px;
+  padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 20px;
   /* space for scrollbar */
@@ -2808,10 +2817,12 @@ section,
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.80);
 }
-.form-control{
+
+.form-control {
   height: 50px;
-    font-size: 16px;
+  font-size: 16px;
 }
+
 .error {
   color: #fff;
   font-size: 12px;
@@ -2906,7 +2917,8 @@ input.error-border {
     text-align: center;
     font-size: 24px;
   }
-  .call-to-action .content-area h4{
+
+  .call-to-action .content-area h4 {
     text-align: center;
   }
 
@@ -2944,7 +2956,8 @@ input.error-border {
   .hero .hero-content {
     top: 28%;
   }
-  .time-grid-paragraph{
+
+  .time-grid-paragraph {
     font-size: 16px;
     margin-top: 5px;
     font-weight: 600;
@@ -3107,52 +3120,56 @@ input.error-border {
   background: #ff0000;
 }
 
-.partners-section{
+.partners-section {
   background-color: #ffebb1;
   border-radius: 20px;
 }
+
 /*chatbot left align css*/
 
-#kenytChatBubble.style1{
+#kenytChatBubble.style1 {
 
-	left: 0 !important;
-	margin-left: 20px !important;
+  left: 0 !important;
+  margin-left: 20px !important;
 
 }
 
 #kenytChatBubble.style1 .chatWithUsMessageWrapper {
 
-right: -180px !important;
+  right: -180px !important;
 
 }
 
-#chatbox-container.position-right{
+#chatbox-container.position-right {
 
-left: 0 !important;	
+  left: 0 !important;
 
 }
 
 #chatbox-container.style1.position-right {
-  
+
   margin-left: 70px !important;
 
-}  
-.hero-img{
-      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-.register-btn{
-      background: #ea9d23;
-    border: none;
-    padding: 10px 15px;
-    width: 100%;
-    color: #000;
-    font-family: Inter;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    border-radius: 5px;
+
+.hero-img {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+
+.register-btn {
+  background: #ea9d23;
+  border: none;
+  padding: 10px 15px;
+  width: 100%;
+  color: #000;
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border-radius: 5px;
+}
+
 /* Hide on small screens if needed */
 @media (max-width: 768px) {
   .floating-social {
