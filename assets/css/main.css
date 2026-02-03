@@ -2941,7 +2941,7 @@ input.error-border {
   }
 
   .hero .hero-content {
-    top: 27%;
+    top: 28%;
   }
 
   .time-grid-paragraph {
@@ -3229,8 +3229,21 @@ input.error-border {
   left: 15%;
 }
 
-@media screen and (max-width: 380px) {
-    .hero .hero-content {
-        top: 25%;
-    }
+@media screen and (min-width: 1220px) and (max-width: 1320px) {
+  .formDiv .form-control {
+    padding: 12px;
+    margin-bottom: 10px;
+    height: 40px;
+    color: #000;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.80);
+  }
+  .formDiv {
+    top: 12%;
+    right: 2%;
+}
 }
