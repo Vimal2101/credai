@@ -7,7 +7,7 @@
 /* Adobe Devanagari – Regular */
 @font-face {
   font-family: "Adobe Devanagari";
-  src: url("assets/fonts/AdobeDevanagari-Regular.otf") format("opentype");
+  src: url("../font/AdobeDevanagari-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -16,7 +16,7 @@
 /* Adobe Devanagari – Italic */
 @font-face {
   font-family: "Adobe Devanagari";
-  src: url("assets/fonts/AdobeDevanagari-Italic.otf") format("opentype");
+  src: url("../font/AdobeDevanagari-Italic.otf") format("opentype");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -25,7 +25,7 @@
 /* Adobe Devanagari – Bold */
 @font-face {
   font-family: "Adobe Devanagari";
-  src: url("assets/fonts/AdobeDevanagari-Bold.otf") format("opentype");
+  src: url("../font/AdobeDevanagari-Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -34,7 +34,7 @@
 /* Adobe Devanagari – Bold Italic */
 @font-face {
   font-family: "Adobe Devanagari";
-  src: url("assets/fonts/AdobeDevanagari-BoldItalic.otf") format("opentype");
+  src: url("../font/AdobeDevanagari-BoldItalic.otf") format("opentype");
   font-weight: 700;
   font-style: italic;
   font-display: swap;
@@ -67,7 +67,7 @@
 
 body {
   color: var(--default-color);
-  background-image: url("../img/credai/bg/body-bg.png");
+  background-image: url("../img/credai/bg/body-bg.webp");
   font-family: var(--default-font);
 
 }
@@ -919,6 +919,14 @@ section,
   background: none;
 }
 
+.bg-count {
+  background: #a10f2f;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
 @media (max-width: 768px) {
   .hero .hero-box {
     padding: 20px;
@@ -958,33 +966,8 @@ section,
 
 
 @media (max-width: 576px) {
-  .hero .hero-content .hero-actions {
-    display: flex;
-    align-items: center;
-    /* gap: 32px; */
-    /* margin-bottom: 64px; */
-    display: grid;
-    background: #a10f2f9e;
-    padding: 10px;
-    border-radius: 15px;
-  }
-
-  .hero .hero-content .hero-actions {
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 48px;
-  }
-
-  .hero .hero-content .hero-actions .reg h4 span {
-    color: #fff !important;
-  }
-
-  .hero .hero-content .hero-actions .reg h4 small {
-    color: #fff !important;
-  }
-
-  .time-box small {
-    color: #fff !important;
+  .bg-count {
+    padding: 8px;
   }
 }
 
@@ -997,7 +980,7 @@ section,
 }
 
 .hero .hero-content .hero-actions .reg h4 span {
-  color: #0b0600;
+  color: #fff;
   font-family: Inter;
   font-size: 26px;
   font-style: normal;
@@ -1006,7 +989,7 @@ section,
 }
 
 .hero .hero-content .hero-actions .reg h4 small {
-  color: #0b0600;
+  color: #fff;
   font-family: Inter;
   font-size: 18px;
   font-style: normal;
@@ -1021,11 +1004,11 @@ section,
 }
 
 .time-grid-paragraph {
-  color: #0b0600;
+  color: #000;
   font-family: Inter;
   font-size: 20px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 
@@ -1065,7 +1048,7 @@ section,
 
 .time-box small {
   margin-top: 6px;
-  color: #0b0600;
+  color: #000;
   text-align: right;
   font-family: Inter;
   font-size: 12px;
@@ -1462,7 +1445,8 @@ section,
   gap: 16px;
   border-radius: 20px;
   border: 1px solid #005B31;
-  background: linear-gradient(180deg, rgba(255, 187, 0, 0.02) 0%, rgba(255, 187, 0, 0.20) 100%), #005B31;
+  background: #992850;
+  /* background: linear-gradient(180deg, rgba(255, 187, 0, 0.02) 0%, rgba(255, 187, 0, 0.20) 100%), #005B31; */
 }
 
 .about .feature-box .feature-icon {
@@ -1484,7 +1468,7 @@ section,
 }
 
 .about .feature-box p {
-  color: #D3D3D3;
+  color: #fff;
 
   font-family: Inter;
   font-size: 18px;
@@ -1493,7 +1477,7 @@ section,
 }
 
 .about .feature-box p span {
-  color: #D3D3D3;
+  color: #fff;
   font-family: Inter;
   font-size: 18px;
   font-style: normal;
@@ -1506,7 +1490,7 @@ section,
 
 .modal-title {
   font-family: "Adobe Devanagari";
-  font-size: 22px;
+  font-size: 28px;
   font-style: normal;
   font-weight: 700;
   text-transform: uppercase;
@@ -1520,8 +1504,6 @@ section,
 # Features Section
 --------------------------------------------------------------*/
 .features .tabs-wrapper {
-  border-top: 1px solid #005B31;
-  border-bottom: 1px solid #A10F2F;
   /* background-color: #005B31; */
   background: url(../img/credai/Journey-bg.webp);
   background-position: bottom center;
@@ -2188,14 +2170,14 @@ section,
 }
 
 .journey-controls button {
-  background: #fff;
-  color: #A10F2F;
+  background: transparent;
+  color: #fff;
   font-weight: 900;
   border: none;
-  padding: 5px 15px;
-  margin-right: 10px;
-  cursor: pointer;
-  border-radius: 5px;
+}
+
+.journey-controls button i {
+  font-size: 36px;
 }
 
 @media (max-width: 991px) {
@@ -2403,6 +2385,7 @@ section,
 }
 
 .services .intro-content .section-heading {
+  text-transform: uppercase;
   font-family: "Adobe Devanagari";
   font-size: 50px;
   font-weight: 700;
@@ -2712,7 +2695,7 @@ section,
 /* Heading outside card (right column) */
 .partner-heading.outside {
   text-align: center;
-  font-weight: 600;
+  font-weight: 700;
   color: #005B31;
   margin-bottom: 20px;
   /* padding-left: 40px; */
@@ -2774,7 +2757,7 @@ section,
 	   */
 .formDivLogo h4 {
   font-family: "Adobe Devanagari";
-  font-size: 22px;
+  font-size: 28px;
   font-style: normal;
   font-weight: 700;
   line-height: 32px;
@@ -2853,6 +2836,10 @@ input.error-border {
 } */
 
 @media screen and (max-width: 768px) {
+  .modal .btn-close {
+    left: 0% !important;
+  }
+
   .custom-footer {
     margin-bottom: 20px;
   }
@@ -2954,14 +2941,14 @@ input.error-border {
   }
 
   .hero .hero-content {
-    top: 28%;
+    top: 27%;
   }
 
   .time-grid-paragraph {
     font-size: 16px;
     margin-top: 5px;
-    font-weight: 600;
-    color: #fff;
+    font-weight: 700;
+    color: #000;
     text-align: center;
   }
 
@@ -3127,7 +3114,7 @@ input.error-border {
 
 /*chatbot left align css*/
 
-#kenytChatBubble.style1 {
+/* #kenytChatBubble.style1 {
 
   left: 0 !important;
   margin-left: 20px !important;
@@ -3150,6 +3137,39 @@ input.error-border {
 
   margin-left: 70px !important;
 
+} */
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  10% {
+    transform: translateX(-2px);
+  }
+
+  20% {
+    transform: translateX(2px);
+  }
+
+  30% {
+    transform: translateX(-2px);
+  }
+
+  40% {
+    transform: translateX(2px);
+  }
+
+  50% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#kenytChatBubble {
+  animation: shake 1.2s ease-in-out infinite;
 }
 
 .hero-img {
@@ -3170,9 +3190,47 @@ input.error-border {
   border-radius: 5px;
 }
 
-/* Hide on small screens if needed */
-@media (max-width: 768px) {
-  .floating-social {
-    display: none;
-  }
+.form-group-select {
+  position: relative;
+}
+
+#property,
+#property1 {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 45px;
+  background-image: none;
+  /* important for Edge */
+}
+
+/* Custom dropdown arrow */
+.form-group-select::after {
+  content: "";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #666;
+  border-bottom: 2px solid #666;
+  transform: translateY(-60%) rotate(45deg);
+  pointer-events: none;
+}
+
+.modal-header {
+  align-self: center;
+}
+
+.modal .btn-close {
+  position: relative;
+  filter: invert(1);
+  /* float: right; */
+  left: 15%;
+}
+
+@media screen and (max-width: 380px) {
+    .hero .hero-content {
+        top: 25%;
+    }
 }

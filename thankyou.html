@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <!-- <link href="assets/vendor/aos/aos.css" rel="stylesheet"> -->
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
   <!-- intl-tel-input CSS -->
@@ -33,29 +33,77 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '640781471970398');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=640781471970398&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MRS927CQ');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7852HKR7HK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7852HKR7HK');
+</script>
+
+
 </head>
+<style>
+  @media screen and (max-width: 768px) {
+    .hero .hero-content {
+      top: 40%;
+    }
+  }
+</style>
 
 <body class="index-page">
-
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRS927CQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid d-flex align-items-center">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/credai/credai-logo.png" alt="">
+        <img src="assets/img/credai/credai-logo.webp" alt="">
         <!-- <h1 class="sitename">Landify</h1> -->
       </a>
 
       <nav id="navmenu" class="navmenu ms-auto">
-        <ul>
+        <!-- <ul>
           <li><a href="#about"><i class="bi bi-house-door-fill"></i> About</a></li>
           <li><a href="#features"><i class="bi bi-building-fill"></i>Particpants</a></li>
           <li><a href="#partners"><i class="bi bi-hand-thumbs-up-fill"></i> Partners</a></li>
 
-        </ul>
+        </ul> -->
         <!-- <i class="mobile-nav-toggle d-xl-none bi bi-list"></i> -->
       </nav>
-
+      
       <a class="btn-getstarted auto-shine-btn" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Get your
         VIP Pass</a>
 
@@ -70,27 +118,27 @@
     <div class="container-fluid" data-aos="fade-right">
       <section id="hero" class="hero section">
         <div class="hero-img">
-          <img src="assets/img/credai/banner/web-banner.png" class="img-fluid d-lg-block d-sm-block d-sm-none d-none"
+          <img src="assets/img/credai/banner/thankyou-web.webp" loading="lazy" decoding="async" class="img-fluid d-lg-block d-sm-block d-sm-none d-none"
             width="100%" alt="banner">
-          <img src="assets/img/credai/banner/mob-banner.png" class="img-fluid d-lg-none d-sm-block d-sm-block d-block"
+          <img src="assets/img/credai/banner/thankyou-mob.webp" loading="lazy" decoding="async" class="img-fluid d-lg-none d-sm-block d-sm-block d-block"
             width="100%" alt="banner">
         </div>
-        <div class="hero-content">
+        <div class="hero-content d-block d-lg-none d-sm-block">
 
           <div class="hero-actions">
-            <a href="#" class="d-none d-md-block d-lg-block mb-3"><i class="bi bi-calendar3"></i> Feb 20th, 21th and
-              22th 2026</a>
+            <a href="#" class="d-none d-md-block d-lg-block mb-3"><i class="bi bi-calendar3"></i> Feb 20th, 21st and
+              22nd 2026</a>
             <a href="#" class="d-none d-md-block d-lg-block"><i class="bi bi-geo-alt-fill"></i> Chennai Trade Center</a>
+            <!-- <div class="bg-count auto-shine-btn">
+              <div class="reg mt-2">
+                <h4 class="counter-number">
+                  <span id="entryCount">0</span><br>
+                  <small class="counter-text"> Registrations</small>
+                </h4>
+              </div>
+            </div> -->
 
-            <div class="reg mt-2">
-              <h4 class="counter-number">
-                <span id="entryCount">0</span><br>
-                <small class="counter-text"> Registrations</small>
-              </h4>
-            </div>
-
-
-            <div class="counter-box mt-2">
+            <div class="counter-box mt-3">
 
               <div class="time-grid">
                 <div class="time-box">
@@ -118,73 +166,10 @@
               <p class="time-grid-paragraph">Timer is Running<br>Hurry Up!</p>
             </div>
 
-          </div>
-        </div>
 
-        <div class="formDiv" id="formDiv" data-aos="fade-left" data-aos-duration="800">
-
-          <div class="formDivLogo text-center">
-            <!-- <img src="asset/img/kg/kgLogo.png"> -->
-             <h4>Thank you for registering. You will receive your VIP pass on your registered WhatsApp number.</h4>
           </div>
 
-          <!-- <form name="form" action="" id="submitForm" method="post" class="full-form-container main-form"
-            onsubmit="return validate();">
 
-            <div class="form-group">
-              <input type="text" id="name" name="name" class="form-control form-text user-icon" placeholder="Name"
-                onkeydown="return /[a-z]/i.test(event.key)">
-              <small class="error" id="nameError"></small>
-            </div>
-            <div class="form-group">
-              <input type="tel" id="phone" name="phone" class="form-control form-text email-icon" placeholder="Mobile">
-              <small class="error" id="phoneError"></small>
-            </div>
-            <div class="form-group">
-              <input type="email" id="email" name="email" class="form-control form-text email-icon" placeholder="Email">
-              <small class="error" id="emailError"></small>
-            </div>
-
-
-         
-            <div class="form-group">
-              <select name="budget" id="budjet" class="form-control form-text email-icon" required="">
-                <option value="">Budget*</option>
-                <option value="20-40L">20-40L</option>
-                <option value="40-60L">40-60L</option>
-                <option value="60-80L">60-80L</option>
-                <option value="80-1Cr">80-1Cr</option>
-                <option value="Above 1Cr">Above 1Cr</option>
-              </select>
-            </div> 
-            <div class="form-group">
-              <select name="property" id="date" class="form-control form-text email-icon">
-                <option value="">Type Of Property</option>
-                <option value="Apartments">Apartments</option>
-                <option value="Villas">Villas</option>
-                <option value="Plots">Plots</option>
-                <option value="Commercial Spaces">Commercial Spaces</option>
-              </select>
-            </div>
-            <input type="hidden" name="url" class="pageUrl">
-          <div class="form-group">
-              <select name="visit" id="date" class="form-control form-text email-icon" required="">
-                <option value="">Date of Visit*</option>
-                <option value="February 14">February 20</option>
-                <option value="February 15">February 21</option>
-                <option value="February 16">February 22</option>
-              </select>
-            </div> 
-
-
-            <div class="form-btn text-center">
-              <input class="" type="submit" value="Submit" id="submitbtn">
-            </div>
-
-          </form> -->
-
-
-        </div>
 
       </section><!-- /Hero Section -->
     </div>
@@ -202,9 +187,18 @@
   </div>
   <footer class="custom-footer" data-aos="fade-up">
     <div class="container-fluid">
+      <h5 class="text-center">Disclaimer </h5>
+      <p class="text-center">In case of any loss or damage, direct or consequential, arising from the loss of data or
+        profits in connection
+        with or coming out of the use of this website, we won’t be liable in any event. Through this website, we can
+        even link to other websites which are not under the control of CREDAI Chennai. We do not have any kind of power
+        over the nature of the content and its availability on these sites. We do not necessarily recommend or endorse
+        any kind of views present in the links by just including these links on our website. All the efforts are made to
+        keep the website up and running smoothly. CREDAI Chennai doesn’t take any responsibility for or will not be
+        liable for the website being temporarily unavailable due to technical issues which are beyond our control.</p>
       <!-- COPYRIGHT (GLOBAL – LAST ALWAYS) -->
       <div class="footer-copy-wrapper text-center mt-4">
-        <p>Copyrights 2026 CREDAI Chennai | All Rights Reserved</p>
+        <p>Copyrights 2026 CREDAI Chennai | All Rights Reserved |<a href="privacy-policy.html"> Privacy Policy</a></p>
       </div>
     </div>
   </footer>
@@ -216,7 +210,7 @@
                         class="fa fa-list"></i>
                     Enquire Now</a></div> -->
   </div>
-<!-- 
+  <!-- 
   <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content rounded-4">
@@ -270,13 +264,13 @@
   </div> -->
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+  <!-- <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a> -->
 
   <!-- Vendor JS Files -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
+  <!-- <script src="assets/vendor/aos/aos.js"></script> -->
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
   <!-- intl-tel-input JS -->
@@ -647,8 +641,8 @@
       }, 10000); // 10 seconds
     });
   </script> -->
-  <script defer src="https://india.kenyt.ai/botapp/ChatbotUI/dist/js/bot-loader.js" type="text/javascript"
-    data-bot="25822720"></script>
+  <!-- <script defer src="https://india.kenyt.ai/botapp/ChatbotUI/dist/js/bot-loader.js" type="text/javascript"
+    data-bot="25822720"></script> -->
 
   <!-- <script src='https://stagingagldashboard.adv8.co/common/js/webform_self.js'>
   </script>
