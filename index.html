@@ -29,7 +29,7 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
   <!-- intl-tel-input CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" /> -->
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
@@ -90,7 +90,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <nav id="navmenu" class="navmenu ms-auto">
         <ul>
           <li><a href="#about"><i class="bi bi-house-door-fill"></i> About Credai FairPro</a></li>
-          <li><a href="#features"><i class="bi bi-building-fill"></i> Pro Particpants</a></li>
+          <li><a href="#features"><i class="bi bi-building-fill"></i> Pro Participants</a></li>
           <li><a href="#partners"><i class="bi bi-hand-thumbs-up-fill"></i> Our Partners</a></li>
 
         </ul>
@@ -331,7 +331,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       <div class="feature-icon">
                         <img src="assets/img/credai/about-icon/shield.webp" loading="lazy" decoding="async" alt="">
                       </div>
-                      <p><span>Trusted Developers and Endless Choices</span></p>
+                      <p><span>Trusted Developers <br> & Endless Choices</span></p>
                     </div>
                   </div>
 
@@ -478,7 +478,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="tabs-wrapper">
           <div class="section-header">
-            <h2>OUR PRO Particpants</h2>
+            <h2>OUR PRO Participants</h2>
             <!-- <h3>You Can Meet</h3> -->
           </div>
 
@@ -1059,7 +1059,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <footer class="custom-footer" data-aos="fade-up">
     <div class="container-fluid">
       <h5 class="text-center">Disclaimer </h5>
-      <p class="text-center">In case of any loss or damage, direct or consequential, arising from the loss of data or
+      <p class="discl">In case of any loss or damage, direct or consequential, arising from the loss of data or
         profits in connection
         with or coming out of the use of this website, we won’t be liable in any event. Through this website, we can
         even link to other websites which are not under the control of CREDAI Chennai. We do not have any kind of power
@@ -1139,8 +1139,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
   <!-- Scroll Top -->
-  <!-- <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a> -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -1149,12 +1149,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
   <!-- intl-tel-input JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js"></script> -->
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <script>
+  <!-- <script>
     const phoneInputs = [
       document.querySelector("#phone"),
       document.querySelector("#phone1")
@@ -1188,113 +1188,178 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         });
       });
     });
-  </script>
+  </script> -->
 
   <script>
-    $("input, select, textarea").focus(function () {
-      $(this).css("border", "1px solid #7c7c7c")
-        .removeClass("error-border");
-      $(this).next(".error").text("");
-    });
+      $(":input").focus(function () {
+         $(this).css("border", "1px solid #7c7c7c");
+      });
 
-    function showError(inputId, message) {
-      $("#" + inputId).addClass("error-border");
-      $("#" + inputId + "Error").text(message);
-    }
 
-    function validate() {
+      function validate() {
+         //alert("e");
 
-      let name = $('#name').val().trim();
-      let phone = $('#phone').val().trim();
-      let email = $('#email').val().trim();
-      let property = $('#property').val().trim(); // ✅ NEW
 
-      let phoneFilter = /^[1-9][0-9]{9}$/;
-      let emailFilter = /^([a-zA-Z0-9_\.\-])+@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+         name = $('#name').val();
 
-      if (name === '') {
-        showError('name', 'Name field is mandatory');
-        return false;
+         email = $('#email').val();
+
+         phone = $('#phone').val();
+
+         property = $('#property').val();
+
+
+
+         if (name == '') {
+
+            alert('Name field is mandatory.');
+            $('#name').css("border", "1px solid red");
+            return false;
+
+         }
+
+         if (phone == '') {
+
+            alert('Phone field is mandatory.');
+            $('#phone').css("border", "1px solid red");
+            return false;
+
+         } else {
+
+            filter = /^[1-9][0-9]{9,12}$/;
+
+            if (filter.test(phone)) {
+
+
+
+            } else {
+
+               alert("Please enter a valid Mobile No.");
+               $('#phone').css("border", "1px solid red");
+               return false;
+
+            }
+         }
+
+
+         if (email == '') {
+
+            alert('Email field is mandatory.');
+            $('#email').css("border", "1px solid red");
+            return false;
+
+         } else {
+            filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if (filter.test(email)) {
+
+
+
+            } else {
+
+               alert("Please enter a valid Email ID.");
+               $('#email').css("border", "1px solid red");
+               //jQuery("#email_"+id).addClass("errorclass");
+
+               return false;
+
+            }
+         }
+
+          if (property == '') {
+
+            alert('Property field is mandatory.');
+            $('#property').css("border", "1px solid red");
+            return false;
+
+         }
+
+         $("#submitbtn").attr("disabled", "disabled");
+         return true;
+
       }
 
-      if (phone === '') {
-        showError('phone', 'Phone field is mandatory');
-        return false;
+
+            function validatepopup() {
+         //alert("e");
+
+
+         name = $('#name1').val();
+
+         email = $('#email1').val();
+
+         phone = $('#phone1').val();
+
+         property = $('#property1').val();
+
+
+
+         if (name == '') {
+
+            alert('Name field is mandatory.');
+            $('#name1').css("border", "1px solid red");
+            return false;
+
+         }
+
+         if (phone == '') {
+
+            alert('Phone field is mandatory.');
+            $('#phone1').css("border", "1px solid red");
+            return false;
+
+         } else {
+
+            filter = /^[1-9][0-9]{9,12}$/;
+
+            if (filter.test(phone)) {
+
+
+
+            } else {
+
+               alert("Please enter a valid Mobile No.");
+               $('#phone1').css("border", "1px solid red");
+               return false;
+
+            }
+         }
+
+
+         if (email == '') {
+
+            alert('Email field is mandatory.');
+            $('#email1').css("border", "1px solid red");
+            return false;
+
+         } else {
+            filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if (filter.test(email)) {
+
+
+
+            } else {
+
+               alert("Please enter a valid Email ID.");
+               $('#email1').css("border", "1px solid red");
+               //jQuery("#email_"+id).addClass("errorclass");
+
+               return false;
+
+            }
+         }
+
+          if (property == '') {
+
+            alert('Property field is mandatory.');
+            $('#property1').css("border", "1px solid red");
+            return false;
+
+         }
+
+         $("#submitbtnpopup").attr("disabled", "disabled");
+         return true;
+
       }
-
-      // if (!phoneFilter.test(phone)) {
-      //   showError('phone', 'Please enter a valid mobile number');
-      //   return false;
-      // }
-
-      if (email === '') {
-        showError('email', 'Email field is mandatory');
-        return false;
-      }
-
-      if (!emailFilter.test(email)) {
-        showError('email', 'Please enter a valid email ID');
-        return false;
-      }
-
-      // ✅ Property validation
-      if (property === '') {
-        showError('property', 'Please select type of property');
-        return false;
-      }
-
-      document.activeElement
-        .closest("form")
-        .dataset.validated = "true";
-      return true;
-    }
-
-    function validatepopup() {
-
-      let name = $('#name1').val().trim();
-      let phone = $('#phone1').val().trim();
-      let email = $('#email1').val().trim();
-      let property = $('#property1').val().trim(); // ✅ FIXED
-
-      let phoneFilter = /^[1-9][0-9]{9}$/;
-      let emailFilter = /^([a-zA-Z0-9_\.\-])+@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-
-      if (name === '') {
-        showError('name1', 'Name field is mandatory');
-        return false;
-      }
-
-      if (phone === '') {
-        showError('phone1', 'Phone field is mandatory');
-        return false;
-      }
-
-      // if (!phoneFilter.test(phone)) {
-      //   showError('phone1', 'Please enter a valid mobile number');
-      //   return false;
-      // }
-
-      if (email === '') {
-        showError('email1', 'Email field is mandatory');
-        return false;
-      }
-
-      if (!emailFilter.test(email)) {
-        showError('email1', 'Please enter a valid email ID');
-        return false;
-      }
-
-      // ✅ Property validation
-      if (property === '') {
-        showError('property1', 'Please select type of property');
-        return false;
-      }
-
-      document.activeElement
-        .closest("form")
-        .dataset.validated = "true";
-      return true;
-    }
   </script>
 
   <script>
@@ -1341,11 +1406,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         const name = form.name.value.trim();
         const phone = form.phone.value.trim();
         const email = form.email.value.trim();
+        const property = form.property.value.trim();
 
-        // ✅ ONLY check if validation already succeeded
-        if (form.dataset.validated !== "true") {
-          return; // validation not completed → stop
-        }
+          // ✅ HARD STOP if invalid
+    if (
+      !name ||
+      !email ||
+      !property ||
+      !/^[1-9][0-9]{9}$/.test(phone)
+    ) {
+      return;
+    }
         const formData = new FormData(form);
 
         // 1️⃣ Send to Google Script
@@ -1366,7 +1437,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       });
     });
   </script>
-  <script>
+  <!-- <script>
     const API_URL = "https://script.google.com/macros/s/AKfycby1YqGH-K--uIYbBe_NUrjjvrne7yebGWF_d_Eqp-5-Yx_ehB1f_2JXeV0a9udAusJ1/exec";
 
     async function fetchEntries() {
@@ -1388,7 +1459,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     // Refresh every second
     setInterval(fetchEntries, 1000);
-  </script>
+  </script> -->
   <script>
     const featureSwiper = new Swiper(".featuresSwiper", {
       loop: true,
@@ -1487,7 +1558,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     updateTimeline(0);
   </script>
 
-  <script>
+  <!-- <script>
     document.addEventListener("DOMContentLoaded", function () {
 
       const wrapper = document.querySelector(".logo-marquee-wrapper");
@@ -1521,17 +1592,57 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       autoScroll();
     });
-  </script>
+  </script> -->
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
+
+  const wrapper = document.querySelector(".logo-marquee-wrapper");
+
+  if (!wrapper) {
+    console.error("logo-marquee-wrapper not found");
+    return;
+  }
+
+  let speed = 1;        // 🚀 fast (1–3 recommended)
+  let paused = false;
+
+  wrapper.addEventListener("mouseenter", () => paused = true);
+  wrapper.addEventListener("mouseleave", () => paused = false);
+
+  function autoScroll() {
+    if (!paused) {
+      wrapper.scrollLeft += speed;
+
+      const maxScroll = wrapper.scrollWidth - wrapper.clientWidth;
+
+      // ✅ when end reached → start again
+      if (wrapper.scrollLeft >= maxScroll) {
+        wrapper.scrollLeft = 0;
+      }
+    }
+    requestAnimationFrame(autoScroll);
+  }
+
+  autoScroll();
+});
+</script>
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
+
+    // ✅ Desktop only (Bootstrap lg and above)
+    if (window.innerWidth >= 992) {
+
       setTimeout(function () {
-        const modal = new bootstrap.Modal(
-          document.getElementById("registerModal")
-        );
+        const modalEl = document.getElementById("registerModal");
+        if (!modalEl) return;
+
+        const modal = new bootstrap.Modal(modalEl);
         modal.show();
-      }, 20000); // 10 seconds
-    });
-  </script>
+      }, 20000); // 20 seconds
+    }
+
+  });
+</script>
   <script defer src="https://india.kenyt.ai/botapp/ChatbotUI/dist/js/bot-loader.js" type="text/javascript"
     data-bot="25822720"></script>
   <script src='https://stagingagldashboard.adv8.co/common/js/webform_self.js'>
